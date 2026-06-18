@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Stoqr · User Flows</title>
+  <link rel="stylesheet" href="colors_and_type.css"/>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <style>
+    body { margin: 0; background: var(--slate-100); }
+    .doc { max-width: 1140px; margin: 0 auto; background: #fff; }
+    @media (max-width: 1180px) { .doc { max-width: 100%; } }
+    .page-pad { padding: 0 48px; }
+    @media (max-width: 720px) { .page-pad { padding: 0 22px; } }
+    a { color: inherit; }
+    @media print {
+      body { background: #fff; }
+      .doc { max-width: 100%; box-shadow: none; }
+      .no-print { display: none !important; }
+      section[id^="flow-"] { break-before: page; }
+    }
+    @page { margin: 14mm; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel" src="flows/flowkit.jsx"></script>
+  <script type="text/babel" src="flows/importer.jsx"></script>
+  <script type="text/babel" src="flows/flow-0-auth.jsx"></script>
+  <script type="text/babel" src="flows/flow-1-inventory.jsx"></script>
+  <script type="text/babel" src="flows/flow-2-inbound.jsx"></script>
+  <script type="text/babel" src="flows/flow-3-outbound.jsx"></script>
+  <script type="text/babel" src="flows/flow-4-feed.jsx"></script>
+  <script type="text/babel" src="flows/flow-5-requests.jsx"></script>
+  <script type="text/babel" src="flows/flow-6-vessels.jsx"></script>
+  <script type="text/babel" src="flows/flow-7-billing.jsx"></script>
+  <script type="text/babel">
+    const FLOWS = [
+      { n: '0', id: 'flow-auth',      title: 'Auth & client portal onboarding', C: window.Flow0 },
+      { n: '1', id: 'flow-inventory', title: 'Warehouse setup, inventory & cycle counts', C: window.Flow1 },
+      { n: '2', id: 'flow-inbound',   title: 'Inbound — storage list to GRN', C: window.Flow2 },
+      { n: '3', id: 'flow-outbound',  title: 'Outbound — pick, pack & dispatch', C: window.Flow3 },
+      { n: '4', id: 'flow-feed',      title: 'Client inventory display feed', C: window.Flow4 },
+      { n: '5', id: 'flow-requests',  title: 'Item requests, POs & procurement chaining', C: window.Flow5 },
+      { n: '6', id: 'flow-vessels',   title: 'Ship-spares — vessels & reserve-at-order', C: window.Flow6 },
+      { n: '7', id: 'flow-billing',   title: 'Billing, invoicing & corrections', C: window.Flow7 },
+    ].filter(f => typeof f.C === 'function');
+
+    function CoverLegend() {
+      const Chip = window.ActorChip, Pill = window.Pill;
+      return (
+        <header style={{ paddingTop: 56, paddingBottom: 40 }}>
+          <div className="page-pad">
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 30 }}>
+              <img src="assets/stoqr-mark.svg" style={{ height: 30 }} alt=""/>
+              <span style={{ fontFamily: 'Geist Mono, monospace', fontWeight: 800, fontSize: 24, letterSpacing: '-0.03em' }}>stoqr</span>
+              <span style={{ marginLeft: 8, fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--fg-tertiary)', border: '1px solid var(--border-subtle)', borderRadius: 4, padding: '3px 8px' }}>Product flows · v1</span>
+            </div>
+            <h1 style={{ margin: 0, fontFamily: 'Geist Mono, monospace', fontSize: 52, fontWeight: 800, letterSpacing: '-0.045em', lineHeight: 0.98 }}>User flows</h1>
+            <p style={{ margin: '16px 0 0', fontSize: 15, color: 'var(--fg-secondary)', maxWidth: 680, lineHeight: 1.55 }}>
+              Screen-by-screen storyboards of the core Stoqr journeys — every screen a user moves through, annotated with the exact status transitions behind it. Operator app and client portal. {FLOWS.length} flows end to end, built around a modern drag-and-drop file importer with inline error correction — from auth through inbound, outbound, procurement, ship-spares and billing.
+            </p>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1.15fr 1fr', gap: 22, marginTop: 34 }}>
+              {/* TOC */}
+              <div>
+                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--fg-tertiary)', marginBottom: 12 }}>Contents</div>
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                  {FLOWS.map(f => (
+                    <a key={f.id} href={'#' + f.id} style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '11px 0', borderTop: '1px solid var(--border-subtle)', textDecoration: 'none' }}>
+                      <span style={{ fontFamily: 'Geist Mono, monospace', fontSize: 18, fontWeight: 800, color: '#2563EB', width: 26 }}>{f.n}</span>
+                      <span style={{ fontSize: 14, fontWeight: 600 }}>{f.title}</span>
+                      <i data-lucide="arrow-right" style={{ width: 15, height: 15, marginLeft: 'auto', color: 'var(--fg-muted)' }}></i>
+                    </a>
+                  ))}
+                </div>
+              </div>
+              {/* Legend */}
+              <div style={{ background: 'var(--slate-50)', border: '1px solid var(--border-subtle)', borderRadius: 10, padding: 18 }}>
+                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--fg-tertiary)', marginBottom: 11 }}>How to read these</div>
+                <div style={{ fontSize: 11, fontWeight: 600, color: 'var(--fg-secondary)', marginBottom: 7 }}>Actors</div>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 14 }}>
+                  {['admin', 'operator', 'supervisor', 'client', 'system'].map(a => <Chip key={a} who={a} size="sm" />)}
+                </div>
+                <div style={{ fontSize: 11, fontWeight: 600, color: 'var(--fg-secondary)', marginBottom: 7 }}>Status pills &amp; transitions</div>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 10 }}>
+                  <Pill kind="muted" mono>new</Pill>
+                  <Pill kind="warning" mono>pending</Pill>
+                  <Pill kind="info" mono>in_progress</Pill>
+                  <Pill kind="brand" mono>active</Pill>
+                  <Pill kind="success" mono>completed</Pill>
+                  <Pill kind="danger" mono>failed</Pill>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 7, fontSize: 11.5, color: 'var(--fg-tertiary)' }}>
+                  <span style={{ fontFamily: 'Geist Mono, monospace', fontSize: 10 }}>field.status</span>
+                  <Pill kind="warning" mono>a</Pill>
+                  <i data-lucide="arrow-right" style={{ width: 12, height: 12 }}></i>
+                  <Pill kind="success" mono>b</Pill>
+                  <span>= state change</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+      );
+    }
+
+    function App() {
+      React.useEffect(() => {
+        if (window.lucide) lucide.createIcons();
+      });
+      return (
+        <div className="doc">
+          <CoverLegend />
+          <div className="page-pad" style={{ paddingBottom: 60 }}>
+            {FLOWS.map(f => <f.C key={f.id} />)}
+          </div>
+          <footer className="page-pad" style={{ padding: '26px 48px 40px', borderTop: '1px solid var(--border-subtle)', display: 'flex', alignItems: 'center', gap: 8, color: 'var(--fg-tertiary)', fontSize: 11.5 }}>
+            <img src="assets/stoqr-mark.svg" style={{ height: 15, opacity: 0.6 }} alt=""/>
+            <span>Stoqr user flows — derived from product specs (Phases 0–7: auth, inventory, inbound, outbound, client feed, item requests, ship-spares, billing). Screens are design references, not production builds.</span>
+          </footer>
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

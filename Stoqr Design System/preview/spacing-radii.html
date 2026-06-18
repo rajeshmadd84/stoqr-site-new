@@ -1,0 +1,16 @@
+<!doctype html>
+<!-- @dsCard group="Spacing" name="Radii" subtitle="Restrained · default 6px" viewport="700x180" --><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"></head>
+<body><div class="card">
+  <div id="r" style="display:flex;gap:14px;align-items:center;justify-content:space-between"></div>
+  <script>
+    const radii = [['xs','2'],['sm','4'],['md','6'],['lg','10'],['xl','16'],['pill','9999']];
+    document.getElementById('r').innerHTML = radii.map(([n,v])=>`
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+        <div style="width:80px;height:80px;background:#fff;border:1.5px solid #2563EB;border-radius:${v}px"></div>
+        <div style="font-size:11px;font-weight:600">${n}</div>
+        <div class="mono" style="font-size:10px;color:var(--fg-tertiary)">${v==='9999'?'pill':v+'px'}</div>
+      </div>
+    `).join('');
+  </script>
+  <div class="label-xs" style="margin-top:12px">Default surface radius is <span class="mono" style="text-transform:none;letter-spacing:0">md / 6px</span> — restrained, matches the angular brand mark.</div>
+</div></body></html>

@@ -1,0 +1,25 @@
+{"timestamp":"00:00:03.432","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:03.432","source":"Server","level":"LOG","message":"  We detected TypeScript in your project and reconfigured your tsconfig.json file for you."}
+{"timestamp":"00:00:03.432","source":"Server","level":"LOG","message":"  The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:\n"}
+{"timestamp":"00:00:03.432","source":"Server","level":"LOG","message":"  \t- include was updated to add '.next/dev/types/**/*.ts'"}
+{"timestamp":"00:00:03.432","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:03.432","source":"Server","level":"LOG","message":"  The following mandatory changes were made to your tsconfig.json:\n"}
+{"timestamp":"00:00:03.433","source":"Server","level":"LOG","message":"  \t- jsx was set to react-jsx (next.js uses the React automatic runtime)"}
+{"timestamp":"00:00:03.433","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:03.521","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:01:14.373","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:01:14.562","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:01:26.285","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:06:28.805","source":"Server","level":"LOG","message":"✓ Compiled in 180ms"}
+{"timestamp":"00:06:34.957","source":"Server","level":"LOG","message":"✓ Compiled in 174ms"}
+{"timestamp":"00:06:54.109","source":"Server","level":"LOG","message":"✓ Compiled in 136ms"}
+{"timestamp":"00:08:08.024","source":"Server","level":"LOG","message":"✓ Compiled in 135ms"}
+{"timestamp":"02:00:12.863","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"03:32:55.163","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"04:58:20.933","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"10:18:52.531","source":"Server","level":"LOG","message":"✓ Compiled in 795ms"}
+{"timestamp":"10:19:00.510","source":"Server","level":"LOG","message":"✓ Compiled in 197ms"}
+{"timestamp":"10:19:04.950","source":"Server","level":"LOG","message":"✓ Compiled in 118ms"}
+{"timestamp":"10:19:15.593","source":"Server","level":"LOG","message":"✓ Compiled in 65ms"}
+{"timestamp":"10:19:19.510","source":"Server","level":"LOG","message":"✓ Compiled in 62ms"}
+{"timestamp":"10:30:33.954","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}

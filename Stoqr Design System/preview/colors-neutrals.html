@@ -1,0 +1,23 @@
+<!doctype html>
+<!-- @dsCard group="Colors" name="Neutrals" subtitle="Cool slate scale, 0–950" viewport="700x140" --><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"></head>
+<body><div class="card">
+  <div style="display:grid;grid-template-columns:repeat(13,1fr);gap:4px">
+  </div>
+  <div id="row" style="display:grid;grid-template-columns:repeat(13,1fr);gap:4px"></div>
+  <div style="display:grid;grid-template-columns:repeat(13,1fr);gap:4px;margin-top:6px;font-size:9px;color:var(--fg-tertiary);font-family:var(--font-mono);text-align:center"></div>
+  <script>
+    const slates = [
+      ['0','#FFFFFF'],['25','#FAFBFC'],['50','#F5F7FB'],['100','#EEF2F7'],
+      ['200','#E2E8F0'],['300','#CBD5E1'],['400','#94A3B8'],['500','#64748B'],
+      ['600','#475569'],['700','#334155'],['800','#1E293B'],['900','#0F172A'],['950','#050B18']
+    ];
+    const row = document.getElementById('row');
+    row.innerHTML = slates.map(([k,v],i)=>`
+      <div style="display:flex;flex-direction:column;align-items:stretch;gap:4px">
+        <div style="height:64px;background:${v};border-radius:6px;border:1px solid rgba(15,23,42,${i<3?0.1:0})"></div>
+        <div style="font-size:10px;font-weight:600;text-align:center">${k}</div>
+        <div class="mono" style="font-size:9px;color:var(--fg-tertiary);text-align:center">${v}</div>
+      </div>
+    `).join('');
+  </script>
+</div></body></html>

@@ -1,0 +1,124 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Iconography" subtitle="Lucide · tweakable · grouped by domain" viewport="700x980" -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="_card.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <style>
+    /* let the card grow with the gallery */
+    .card { width: 700px; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel" src="tweaks-panel.jsx"></script>
+  <script type="text/babel">
+    const { useEffect } = React;
+
+    // Stoqr icon set — Lucide, grouped by product domain.
+    const CATS = [
+      { key: 'Inventory & items', icons: ['package','package-plus','package-minus','package-check','package-x','package-search','box','boxes','container','layers','archive','tag','tags','barcode','scan-line','qr-code','scale','ruler'] },
+      { key: 'Warehouse & layout', icons: ['warehouse','building','building-2','map-pin','map','grid-2x2','grid-3x3','layout-grid','columns-3','rows-3','signpost','route','door-open','split'] },
+      { key: 'Inbound & outbound', icons: ['truck','ship','plane','anchor','import','arrow-down-to-line','arrow-up-from-line','send','inbox','log-in','log-out','arrow-down-up'] },
+      { key: 'Movements & counts', icons: ['arrow-left-right','repeat','rotate-ccw','refresh-cw','move','clipboard-check','clipboard-list','list-checks','history','git-compare','calculator','undo-2'] },
+      { key: 'Status & semantics', icons: ['check-circle-2','x-circle','alert-triangle','alert-circle','alert-octagon','info','shield-check','shield-alert','ban','clock','timer','hourglass','loader-circle','badge-check','circle-dot','circle-slash'] },
+      { key: 'Files & documents', icons: ['file-text','file-spreadsheet','file-check-2','file-x-2','file-down','file-up','files','clipboard','receipt','scroll-text','stamp','paperclip','folder','upload-cloud','download','printer'] },
+      { key: 'Users & auth', icons: ['users','user','user-check','user-plus','user-cog','shield','lock','key','key-round','fingerprint','hard-hat','contact'] },
+      { key: 'AI, agents & workflow', icons: ['sparkles','workflow','bot','brain','wand-2','git-branch','network','share-2','cpu','zap','gauge','radar'] },
+      { key: 'Navigation & UI', icons: ['search','filter','sliders-horizontal','settings','settings-2','more-horizontal','bell','layout-dashboard','panel-left','chevron-right','chevrons-up-down','plus','x','calendar','calendar-check','eye','eye-off','pencil','trash-2','copy','external-link','ellipsis'] },
+    ];
+    const TOTAL = CATS.reduce((a, c) => a + c.icons.length, 0);
+
+    const COLOR_OPTS = ['#0F172A','#64748B','#2563EB','#16A34A','#D97706','#DC2626','#0891B2','#7C3AED'];
+
+    const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+      "size": 18,
+      "stroke": 1.75,
+      "color": "#0F172A",
+      "cols": 10,
+      "labels": true,
+      "borders": true,
+      "category": "All"
+    }/*EDITMODE-END*/;
+
+    function IconTile({ name, size, stroke, color, labels, borders }) {
+      return (
+        <div style={{
+          display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 5,
+          padding: labels ? '11px 4px 9px' : '11px 4px',
+          border: borders ? '1px solid var(--border-subtle)' : '1px solid transparent',
+          borderRadius: 6, minWidth: 0,
+        }}>
+          <i data-lucide={name} style={{ width: size, height: size, strokeWidth: stroke, color }}></i>
+          {labels && (
+            <div className="mono" style={{ fontSize: 9, color: 'var(--fg-tertiary)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', width: '100%', textAlign: 'center' }}>{name}</div>
+          )}
+        </div>
+      );
+    }
+
+    function App() {
+      const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+      const cats = t.category === 'All' ? CATS : CATS.filter(c => c.key === t.category);
+      const galleryKey = [t.size, t.stroke, t.color, t.cols, t.labels, t.borders, t.category].join('|');
+
+      useEffect(() => { if (window.lucide) lucide.createIcons(); }, [galleryKey]);
+
+      return (
+        <React.Fragment>
+          <div className="card">
+            {/* header */}
+            <div className="row" style={{ justifyContent: 'space-between', marginBottom: 18 }}>
+              <div className="col" style={{ gap: 3 }}>
+                <div style={{ fontFamily: 'var(--font-mono)', fontWeight: 700, fontSize: 16, letterSpacing: '-0.02em' }}>Iconography</div>
+                <div className="muted" style={{ fontSize: 11.5 }}>Lucide · {t.stroke} stroke · {t.size}px · inherits currentColor</div>
+              </div>
+              <div className="label-xs" style={{ textAlign: 'right' }}>{cats.reduce((a, c) => a + c.icons.length, 0)} / {TOTAL} icons</div>
+            </div>
+
+            {/* gallery */}
+            <div key={galleryKey} className="col" style={{ gap: 18 }}>
+              {cats.map(cat => (
+                <div key={cat.key} className="col" style={{ gap: 8 }}>
+                  <div className="row" style={{ gap: 8 }}>
+                    <span className="label-xs">{cat.key}</span>
+                    <span style={{ flex: 1, height: 1, background: 'var(--border-subtle)' }}></span>
+                    <span className="mono" style={{ fontSize: 9.5, color: 'var(--fg-muted)' }}>{cat.icons.length}</span>
+                  </div>
+                  <div style={{ display: 'grid', gridTemplateColumns: `repeat(${t.cols}, 1fr)`, gap: 8 }}>
+                    {cat.icons.map(n => (
+                      <IconTile key={n} name={n} size={t.size} stroke={t.stroke} color={t.color} labels={t.labels} borders={t.borders} />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="label-xs" style={{ marginTop: 18 }}>No emoji, ever · icon + label is the default · icon-only needs a tooltip + 36px hit area</div>
+          </div>
+
+          <TweaksPanel>
+            <TweakSection label="Icon" />
+            <TweakSlider label="Size" value={t.size} min={14} max={36} step={1} unit="px" onChange={v => setTweak('size', v)} />
+            <TweakSlider label="Stroke" value={t.stroke} min={1} max={2.5} step={0.25} onChange={v => setTweak('stroke', v)} />
+            <TweakColor label="Color" value={t.color} options={COLOR_OPTS} onChange={v => setTweak('color', v)} />
+            <TweakSection label="Layout" />
+            <TweakSlider label="Columns" value={t.cols} min={5} max={12} step={1} onChange={v => setTweak('cols', v)} />
+            <TweakToggle label="Show names" value={t.labels} onChange={v => setTweak('labels', v)} />
+            <TweakToggle label="Tile borders" value={t.borders} onChange={v => setTweak('borders', v)} />
+            <TweakSection label="Filter" />
+            <TweakSelect label="Category" value={t.category} options={['All', ...CATS.map(c => c.key)]} onChange={v => setTweak('category', v)} />
+          </TweaksPanel>
+        </React.Fragment>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

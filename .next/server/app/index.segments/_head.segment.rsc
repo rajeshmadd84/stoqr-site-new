@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[97367,["/_next/static/chunks/1d4h-sglyo8ft.js","/_next/static/chunks/14mumt5_n0xhi.js"],"ViewportBoundary"]
+3:I[97367,["/_next/static/chunks/1d4h-sglyo8ft.js","/_next/static/chunks/14mumt5_n0xhi.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Stoqr — Agentic Warehousing & Transport Management"}],["$","meta","1",{"name":"description","content":"Stoqr is an agentic platform for warehousing and transport. AI agents receive, store, pick, pack, dispatch, and bill across every zone — for SMB warehouses, 3PLs, and enterprises in Singapore, India, and the EU."}]]}]}]}],null]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"i_wFYDeCOV5wM0gEPGLRx"}

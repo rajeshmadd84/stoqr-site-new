@@ -1,0 +1,25 @@
+<!doctype html>
+<!-- @dsCard group="Colors" name="Semantic Colors" subtitle="Success / warning / danger / info / AI" viewport="700x210" --><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"></head>
+<body><div class="card">
+  <div id="g" style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px"></div>
+  <script>
+    const sem = [
+      ['Success','In stock · Approved','#16A34A','#DCFCE7','#86EFAC'],
+      ['Warning','Low · Pending','#D97706','#FEF3C7','#FCD34D'],
+      ['Danger','Out · Rejected','#DC2626','#FEE2E2','#FCA5A5'],
+      ['Info','In transit','#0891B2','#CFFAFE','#67E8F9'],
+      ['AI / Agent','Autonomous','#7C3AED','#EDE9FE','#C4B5FD']
+    ];
+    document.getElementById('g').innerHTML = sem.map(([n,u,fg,bg,br])=>`
+      <div style="border:1px solid var(--border-subtle);border-radius:6px;overflow:hidden">
+        <div style="background:${fg};height:36px"></div>
+        <div style="padding:10px 12px">
+          <div style="font-weight:600;font-size:12px">${n}</div>
+          <div class="muted" style="font-size:11px;margin-bottom:8px">${u}</div>
+          <div style="display:flex;align-items:center;gap:6px;background:${bg};border:1px solid ${br};color:${fg};padding:3px 8px;border-radius:9999px;font-size:10px;font-weight:600;width:fit-content;letter-spacing:0.04em;text-transform:uppercase">${n}</div>
+          <div class="mono" style="font-size:9px;color:var(--fg-tertiary);margin-top:8px;line-height:1.4">${fg}<br>${bg}<br>${br}</div>
+        </div>
+      </div>
+    `).join('');
+  </script>
+</div></body></html>

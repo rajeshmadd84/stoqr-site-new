@@ -1,0 +1,30 @@
+/* Preview card base — used by every card in /preview/.
+   Cards are 700px wide; content sits flush, no titles. */
+@import url('../colors_and_type.css');
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-surface);
+  color: var(--fg-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+.card {
+  width: 700px;
+  background: var(--bg-surface);
+  padding: 20px;
+}
+.row { display: flex; align-items: center; gap: 12px; }
+.col { display: flex; flex-direction: column; gap: 8px; }
+.grid { display: grid; gap: 10px; }
+.muted { color: var(--fg-tertiary); }
+.mono { font-family: var(--font-mono); }
+.label-xs {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-tertiary);
+}
