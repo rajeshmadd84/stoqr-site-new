@@ -188,9 +188,9 @@ const compliance = [
 ];
 
 const team = [
-  { initials: "RM", name: "Rajesh Maddineni", role: "Founder & CEO" },
-  { initials: "TS", name: "Tahrun Sai Kalimili", role: "CTO" },
-  { initials: "VK", name: "Vishnu Srujan Kolli", role: "CPO" },
+  { initials: "RM", name: "Rajesh Maddineni", role: "Co-Founder & CEO" },
+  { initials: "TS", name: "Tahrun Sai Kalimili", role: "Co-Founder & CTO" },
+  { initials: "DY", name: "Deepesh Yenuga", role: "Co-Founder & CPO" },
   { initials: "HS", name: "Hari Sagaran", role: "CGO" },
 ];
 
@@ -608,9 +608,9 @@ export default function StoqrLanding() {
                 <div className="flag">Singapore</div>
                 <h4>Stoqr Singapore Pte. Ltd.</h4>
                 <address>
-                  21 Pandan Avenue #04-A, Senkee Logistics Hub
+                  #15-01,MIDDLE ROAD, FORTUNE CENTRE
                   <br />
-                  609388, Singapore
+                  Singapore 188979
                 </address>
               </div>
             </div>
