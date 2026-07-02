@@ -92,55 +92,63 @@ const modules = [
     h: "Inventory & warehouse layout",
     p: "Map every warehouse to the bin. Multi-floor zones, QR-addressed locations, and a full storage-rules engine for dimensions, weight, temperature, and hazmat. Track SKUs to the each, or whole pallets you store and forward.",
     tags: ["QR-addressed", "FEFO / FIFO", "Batch · Lot · Serial"],
+    hPrimary: true,
   },
   {
     id: "Module · Inbound",
     h: "Inbound & receiving",
     p: "From storage list to shelf. Stoqr parses incoming files, opens a job, and walks it through receiving — quantities, variances, document checks, inventory update, and an auto-generated GRN.",
     tags: ["File parsing", "Variance flags", "Auto GRN"],
+    hPrimary: true,
   },
   {
     id: "Module · Outbound",
     h: "Outbound & dispatch",
     p: "Pick, pack, dispatch. Location-ordered pick lists, scan-verified packing, automatic stock deduction, and dispatch notes carrying carrier, vehicle, driver, and tracking — visible to clients live.",
     tags: ["Pick paths", "Pack scanning", "Carrier + tracking"],
+    hPrimary: true,
   },
   {
     id: "Module · Procurement",
     h: "Item requests & procurement",
     p: "Clients ask, Stoqr sources. Requests flow through sourcing, PO, and receipt against a full supplier directory. Delivered POs auto-chain into an inbound job, then an outbound job on ship date.",
     tags: ["Supplier directory", "PO lifecycle", "Auto-chaining"],
+    hPrimary: true,
   },
   {
     id: "Module · Maritime",
     h: "Ship spares & bonded storage",
     p: "Built for maritime clients. Track vessels by IMO, reserve parts to a specific ship, and clear customs inside the flow — TradeNet permits and Ship Stores Declarations as mandatory steps, bonded stock by zone.",
     tags: ["IMO vessels", "TradeNet", "Bonded"],
+    hPrimary: true,
   },
   {
     id: "Module · Billing",
     h: "Billing & invoicing",
     p: "Every move, metered. Step-level job billing, daily-snapshot storage billing, a wallet ledger for each debit and credit, and one auto-generated invoice per cycle — PDF in the cloud, corrections without rewriting history.",
     tags: ["Job + storage", "Wallet ledger", "Auto invoice"],
+    hPrimary: true,
   },
   {
     id: "Module · Compliance",
     h: "Compliance & audit",
     p: "Region-locked by design. GDPR, PDPA, and DPDPA built in — consent records, DSAR workflows with deadline tracking, breach timelines, and an immutable, hash-chained audit log of every action.",
     tags: ["DSAR", "Hash-chained log", "Data residency"],
+    hPrimary: true,
   },
   {
     id: "Module · Client portal",
     h: "Client portal",
     p: "Your customers, self-served. A read-only window onto inventory, inbound, outbound, and invoices — with per-client visibility you control. One login spans every vendor a client works with.",
     tags: ["Read-only views", "Per-client control", "Cross-vendor"],
+    hPrimary: true,
   },
   {
     id: "Layer · Agentic",
     h: "The agentic layer",
     p: "Agents sit on top of every flow — watching jobs, reasoning about exceptions, and acting. They reallocate short picks, flag variances, retry failed steps, and escalate only what needs a human.",
     tags: ["Observe", "Reason", "Act"],
-    feat: true,
+    hPrimary: true,
   },
 ];
 
@@ -151,6 +159,7 @@ const segments = [
     who: "Single-site operators who want to retire the spreadsheets.",
     points: ["Full WMS: layout, inbound, outbound", "QR labels and cycle counts", "Self-serve onboarding"],
     iso: "// Shared DB · row-level isolation",
+    hPrimary: true,
   },
   {
     tier: "Professional",
@@ -159,6 +168,7 @@ const segments = [
     points: ["Per-client billing & invoicing", "Client portal with controlled visibility", "Bonded, maritime & procurement flows"],
     iso: "// Schema-per-tenant isolation",
     feat: true,
+    hPrimary: true,
   },
   {
     tier: "Enterprise",
@@ -166,6 +176,7 @@ const segments = [
     who: "Operations that need their data in their own region, full stop.",
     points: ["Dedicated database, optionally self-hosted", "SSO, granular RBAC & audit", "GDPR / PDPA / DPDPA residency"],
     iso: "// Dedicated DB · EU · SG · IN",
+    hPrimary: true,
   },
 ];
 
@@ -345,9 +356,8 @@ export default function StoqrLanding() {
             <div className="hero-copy">
               <span className="eyebrow">Warehousing &amp; Transport · Agentic AI</span>
               <h1>
-                Your warehouse,
-                <br />
-                on <span className="brand">autopilot.</span>
+                Your warehouse,<br />
+                on <span style={{ color: "var(--brand-blue)" }}>autopilot.</span>
               </h1>
               <p className="hero-sub">
                 Stoqr is an agentic platform for warehousing and transport. AI agents receive, store, pick, pack,
@@ -360,7 +370,7 @@ export default function StoqrLanding() {
                 <a href="#how" className="sq-btn sq-btn-ghost">
                   See how it works
                 </a>
-                <span className="hero-note">// First module live · July 2026</span>
+                
               </div>
             </div>
             <WarehouseFloor />
@@ -380,7 +390,7 @@ export default function StoqrLanding() {
               </span>
               <span>GDPR · PDPA · DPDPA</span>
               <span>
-                <b>SG</b> · <b>IN</b> · <b>EU</b>
+                <b>SG</b> · <b>IN</b> · <b>UAE</b>
               </span>
             </div>
           </div>
@@ -390,8 +400,8 @@ export default function StoqrLanding() {
         <section className="problem sec" id="platform">
           <div className="sq-wrap">
             <div className="sec-head reveal">
-              <span className="eyebrow">The cost of the floor</span>
-              <h2>Warehouses don&rsquo;t lose money on rent. They lose it on operations.</h2>
+              <span className="eyebrow eyebrow-danger">The cost of the floor</span>
+              <h2>Warehouses don&rsquo;t lose money on rent. <span style={{ color: "var(--danger)" }}>They lose it on operations.</span></h2>
               <p>
                 Racking is the cheap part. The expensive part is everything that happens between the inbound dock and
                 the invoice — and most of it still runs on paper, spreadsheets, and memory.
@@ -414,7 +424,7 @@ export default function StoqrLanding() {
           <div className="sq-wrap">
             <div className="sec-head reveal">
               <span className="eyebrow">How Stoqr works</span>
-              <h2>Goods flow in, get stored, flow out — and Stoqr runs every step.</h2>
+              <h2>Goods flow in, get stored, flow out — and <span style={{ color: "var(--brand-blue)" }}>Stoqr runs every step.</span></h2>
               <p>
                 Every operation in Stoqr is a <b style={{ color: "var(--fg-primary)" }}>flow</b>: an ordered sequence of
                 steps your team defines once. Upload a list, Stoqr spins up a job, and agents execute it — recording
@@ -446,7 +456,7 @@ export default function StoqrLanding() {
           <div className="sq-wrap">
             <div className="sec-head reveal">
               <span className="eyebrow">The platform</span>
-              <h2>One system, from the inbound dock to the invoice.</h2>
+              <h2>One system, from the <span style={{ color: "var(--brand-blue)" }}>inbound dock to the invoice.</span></h2>
               <p>
                 Eight modules built on a single flow engine and one source of inventory truth. Run fulfilment and 3PL
                 storage in the same building — service type is set per job, not per client.
@@ -454,9 +464,9 @@ export default function StoqrLanding() {
             </div>
             <div className="mod-grid">
               {modules.map((m) => (
-                <div className={`mod reveal${m.feat ? " feat" : ""}`} key={m.h}>
+                <div className="mod reveal" key={m.h}>
                   <div className="mod-id">{m.id}</div>
-                  <h3>{m.h}</h3>
+                  <h3 style={m.hPrimary ? { color: "var(--brand-blue)" } : undefined}>{m.h}</h3>
                   <p>{m.p}</p>
                   <div className="tags">
                     {m.tags.map((t) => (
@@ -474,7 +484,7 @@ export default function StoqrLanding() {
           <div className="sq-wrap agent-wrap">
             <div className="agent-copy reveal">
               <span className="eyebrow">The agentic layer</span>
-              <h2>Flows aren&rsquo;t checklists. They&rsquo;re agents.</h2>
+              <h2>Flows aren&rsquo;t checklists. <span style={{ color: "var(--brand-blue)" }}>They&rsquo;re agents.</span></h2>
               <p>
                 A flow in Stoqr isn&rsquo;t a static set of boxes to tick. Each job is watched by AI agents that
                 understand what the step is for, notice when something&rsquo;s wrong, and act on it — before a human
@@ -488,21 +498,21 @@ export default function StoqrLanding() {
                 <li>
                   <Check />
                   <span>
-                    <b>Self-healing jobs.</b> Short pick on a line? The agent reallocates from another location and
+                    <b style={{ color: "var(--brand-blue)" }}>Self-healing jobs.</b> Short pick on a line? The agent reallocates from another location and
                     keeps the job moving instead of stalling for a supervisor.
                   </span>
                 </li>
                 <li>
                   <Check />
                   <span>
-                    <b>Exceptions, not everything.</b> Variances get flagged, retries get attempted, and only the
+                    <b style={{ color: "var(--brand-blue)" }}>Exceptions, not everything.</b> Variances get flagged, retries get attempted, and only the
                     genuinely unusual reaches a person. Your team manages the edge cases, not the routine.
                   </span>
                 </li>
                 <li>
                   <Check />
                   <span>
-                    <b>A data flywheel.</b> Every receipt, pick, and dispatch trains the model on your operation — so
+                    <b style={{ color: "var(--brand-blue)" }}>A data flywheel.</b> Every receipt, pick, and dispatch trains the model on your operation — so
                     forecasts, allocations, and routing get sharper over time.
                   </span>
                 </li>
@@ -627,11 +637,10 @@ export default function StoqrLanding() {
               <h2>
                 See Stoqr run
                 <br />
-                your <span className="brand">warehouse.</span>
+                your <span style={{ color: "var(--brand-blue-bright)" }}>warehouse.</span>
               </h2>
               <p>
-                Put one flow on autopilot and watch it work — from the inbound dock to the invoice. First module live
-                July 2026.
+                Put one flow on autopilot and watch it work — from the inbound dock to the invoice. 
               </p>
               <div className="cta-actions">
                 <a href={PILOT_URL} className="sq-btn sq-btn-primary">
