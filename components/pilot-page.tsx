@@ -3,9 +3,9 @@
 /* ============================================================
    Stoqr — /pilot page (request-a-pilot, client component)
 
-   The form holds state locally and shows a success view on submit.
-   Wire the actual submission where marked TODO below — an API route
-   (app/api/pilot/route.ts), a Server Action, or your CRM/email tool.
+   Submissions post directly to Web3Forms (api.web3forms.com), which
+   emails the request — no backend needed. Requires
+   NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY to be set.
    ============================================================ */
 
 import { useState } from "react";
@@ -37,6 +37,7 @@ type Field = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
 
 export default function PilotPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", company: "", role: roles[0], operation: operations[0], region: regions[0], firstFlow: firstFlows[0], volume: "", message: "" });
   const [error, setError] = useState("");
 
@@ -53,15 +54,35 @@ export default function PilotPage() {
       return;
     }
     setError("");
+    setSubmitting(true);
 
-    // TODO: wire this to your backend, e.g.
-    // await fetch("/api/pilot", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(form),
-    // });
-
-    setSubmitted(true);
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+          subject: `New pilot request — ${form.company || form.name}`,
+          from_name: "Stoqr pilot form",
+          name: form.name,
+          email: form.email,
+          company: form.company,
+          role: form.role,
+          operation: form.operation,
+          region: form.region,
+          first_flow: form.firstFlow,
+          volume: form.volume,
+          message: form.message,
+        }),
+      });
+      const data = await res.json();
+      if (!data.success) throw new Error(data.message || "Submission failed");
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong sending your request. Please try again or email us directly.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -220,8 +241,8 @@ export default function PilotPage() {
                   )}
 
                   <div className="form-foot">
-                    <button type="submit" className="sq-btn sq-btn-primary">
-                      Request a pilot <span className="arw">→</span>
+                    <button type="submit" className="sq-btn sq-btn-primary" disabled={submitting}>
+                      {submitting ? "Sending…" : "Request a pilot"} {!submitting && <span className="arw">→</span>}
                     </button>
                     <p className="form-note">
                       We&rsquo;ll only use this to talk to you about Stoqr.

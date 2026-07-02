@@ -6,13 +6,14 @@ __turbopack_context__.s([
     "default",
     ()=>PilotPage
 ]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 /* ============================================================
    Stoqr — /pilot page (request-a-pilot, client component)
 
-   The form holds state locally and shows a success view on submit.
-   Wire the actual submission where marked TODO below — an API route
-   (app/api/pilot/route.ts), a Server Action, or your CRM/email tool.
+   Submissions post directly to Web3Forms (api.web3forms.com), which
+   emails the request — no backend needed. Requires
+   NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY to be set.
    ============================================================ */ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 ;
@@ -68,6 +69,7 @@ const steps = [
 function PilotPage() {
     _s();
     const [submitted, setSubmitted] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [submitting, setSubmitting] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [form, setForm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
         name: "",
         email: "",
@@ -95,13 +97,37 @@ function PilotPage() {
             return;
         }
         setError("");
-        // TODO: wire this to your backend, e.g.
-        // await fetch("/api/pilot", {
-        //   method: "POST",
-        //   headers: { "Content-Type": "application/json" },
-        //   body: JSON.stringify(form),
-        // });
-        setSubmitted(true);
+        setSubmitting(true);
+        try {
+            const res = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
+                },
+                body: JSON.stringify({
+                    access_key: ("TURBOPACK compile-time value", "e7382492-2ff0-4503-91b7-208d848ed50e"),
+                    subject: `New pilot request — ${form.company || form.name}`,
+                    from_name: "Stoqr pilot form",
+                    name: form.name,
+                    email: form.email,
+                    company: form.company,
+                    role: form.role,
+                    operation: form.operation,
+                    region: form.region,
+                    first_flow: form.firstFlow,
+                    volume: form.volume,
+                    message: form.message
+                })
+            });
+            const data = await res.json();
+            if (!data.success) throw new Error(data.message || "Submission failed");
+            setSubmitted(true);
+        } catch  {
+            setError("Something went wrong sending your request. Please try again or email us directly.");
+        } finally{
+            setSubmitting(false);
+        }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "stoqr-root",
@@ -123,12 +149,12 @@ function PilotPage() {
                                 priority: true
                             }, void 0, false, {
                                 fileName: "[project]/components/pilot-page.tsx",
-                                lineNumber: 72,
+                                lineNumber: 93,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/pilot-page.tsx",
-                            lineNumber: 71,
+                            lineNumber: 92,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -137,18 +163,18 @@ function PilotPage() {
                             children: "← Back to site"
                         }, void 0, false, {
                             fileName: "[project]/components/pilot-page.tsx",
-                            lineNumber: 74,
+                            lineNumber: 95,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/pilot-page.tsx",
-                    lineNumber: 70,
+                    lineNumber: 91,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/pilot-page.tsx",
-                lineNumber: 69,
+                lineNumber: 90,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -174,24 +200,24 @@ function PilotPage() {
                                         strokeLinejoin: "round"
                                     }, void 0, false, {
                                         fileName: "[project]/components/pilot-page.tsx",
-                                        lineNumber: 86,
+                                        lineNumber: 107,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/pilot-page.tsx",
-                                    lineNumber: 85,
+                                    lineNumber: 106,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/pilot-page.tsx",
-                                lineNumber: 84,
+                                lineNumber: 105,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                 children: "Request received."
                             }, void 0, false, {
                                 fileName: "[project]/components/pilot-page.tsx",
-                                lineNumber: 89,
+                                lineNumber: 110,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -206,14 +232,14 @@ function PilotPage() {
                                         children: form.email
                                     }, void 0, false, {
                                         fileName: "[project]/components/pilot-page.tsx",
-                                        lineNumber: 91,
+                                        lineNumber: 112,
                                         columnNumber: 90
                                     }, this),
                                     " to set up your pilot."
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/pilot-page.tsx",
-                                lineNumber: 90,
+                                lineNumber: 111,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -225,14 +251,14 @@ function PilotPage() {
                                                 children: "01"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                lineNumber: 95,
+                                                lineNumber: 116,
                                                 columnNumber: 19
                                             }, this),
                                             " We review your operation within 2 business days"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/pilot-page.tsx",
-                                        lineNumber: 94,
+                                        lineNumber: 115,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -241,14 +267,14 @@ function PilotPage() {
                                                 children: "02"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                lineNumber: 98,
+                                                lineNumber: 119,
                                                 columnNumber: 19
                                             }, this),
                                             " A short intro call to map your first flow"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/pilot-page.tsx",
-                                        lineNumber: 97,
+                                        lineNumber: 118,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -257,20 +283,20 @@ function PilotPage() {
                                                 children: "03"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                lineNumber: 101,
+                                                lineNumber: 122,
                                                 columnNumber: 19
                                             }, this),
                                             " We stand up your pilot module — first module live July 2026"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/pilot-page.tsx",
-                                        lineNumber: 100,
+                                        lineNumber: 121,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/pilot-page.tsx",
-                                lineNumber: 93,
+                                lineNumber: 114,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -279,13 +305,13 @@ function PilotPage() {
                                 children: "Back to site"
                             }, void 0, false, {
                                 fileName: "[project]/components/pilot-page.tsx",
-                                lineNumber: 104,
+                                lineNumber: 125,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/pilot-page.tsx",
-                        lineNumber: 83,
+                        lineNumber: 104,
                         columnNumber: 13
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "pilot-grid",
@@ -298,7 +324,7 @@ function PilotPage() {
                                         children: "Start a pilot"
                                     }, void 0, false, {
                                         fileName: "[project]/components/pilot-page.tsx",
-                                        lineNumber: 112,
+                                        lineNumber: 133,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -309,13 +335,13 @@ function PilotPage() {
                                                 children: "autopilot."
                                             }, void 0, false, {
                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                lineNumber: 114,
+                                                lineNumber: 135,
                                                 columnNumber: 35
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/pilot-page.tsx",
-                                        lineNumber: 113,
+                                        lineNumber: 134,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -323,7 +349,7 @@ function PilotPage() {
                                         children: "Pick a single operation — receiving, dispatch, billing — and we’ll stand it up on Stoqr for your warehouse. No rip-and-replace, no year-long rollout."
                                     }, void 0, false, {
                                         fileName: "[project]/components/pilot-page.tsx",
-                                        lineNumber: 116,
+                                        lineNumber: 137,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -335,7 +361,7 @@ function PilotPage() {
                                                         children: s.n
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/pilot-page.tsx",
-                                                        lineNumber: 123,
+                                                        lineNumber: 144,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -344,31 +370,31 @@ function PilotPage() {
                                                                 children: s.h
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                                lineNumber: 125,
+                                                                lineNumber: 146,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                 children: s.p
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                                lineNumber: 126,
+                                                                lineNumber: 147,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/pilot-page.tsx",
-                                                        lineNumber: 124,
+                                                        lineNumber: 145,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, s.n, true, {
                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                lineNumber: 122,
+                                                lineNumber: 143,
                                                 columnNumber: 21
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/components/pilot-page.tsx",
-                                        lineNumber: 120,
+                                        lineNumber: 141,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -378,46 +404,46 @@ function PilotPage() {
                                                 children: "Your data stays in your region"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                lineNumber: 132,
+                                                lineNumber: 153,
                                                 columnNumber: 19
                                             }, this),
                                             " — SG, IN, or EU.",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                lineNumber: 133,
+                                                lineNumber: 154,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("b", {
                                                 children: "Works alongside your ERP"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                lineNumber: 134,
+                                                lineNumber: 155,
                                                 columnNumber: 19
                                             }, this),
                                             " — no migration required.",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                lineNumber: 135,
+                                                lineNumber: 156,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("b", {
                                                 children: "No obligation"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                lineNumber: 136,
+                                                lineNumber: 157,
                                                 columnNumber: 19
                                             }, this),
                                             " — a pilot is a pilot."
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/pilot-page.tsx",
-                                        lineNumber: 131,
+                                        lineNumber: 152,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/pilot-page.tsx",
-                                lineNumber: 111,
+                                lineNumber: 132,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -428,14 +454,14 @@ function PilotPage() {
                                         children: "Request access"
                                     }, void 0, false, {
                                         fileName: "[project]/components/pilot-page.tsx",
-                                        lineNumber: 142,
+                                        lineNumber: 163,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                         children: "Tell us about your warehouse"
                                     }, void 0, false, {
                                         fileName: "[project]/components/pilot-page.tsx",
-                                        lineNumber: 143,
+                                        lineNumber: 164,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -457,13 +483,13 @@ function PilotPage() {
                                                                         children: "*"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/pilot-page.tsx",
-                                                                        lineNumber: 149,
+                                                                        lineNumber: 170,
                                                                         columnNumber: 35
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                                lineNumber: 148,
+                                                                lineNumber: 169,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -474,13 +500,13 @@ function PilotPage() {
                                                                 onChange: update("name")
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                                lineNumber: 151,
+                                                                lineNumber: 172,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/pilot-page.tsx",
-                                                        lineNumber: 147,
+                                                        lineNumber: 168,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -495,13 +521,13 @@ function PilotPage() {
                                                                         children: "*"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/pilot-page.tsx",
-                                                                        lineNumber: 155,
+                                                                        lineNumber: 176,
                                                                         columnNumber: 36
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                                lineNumber: 154,
+                                                                lineNumber: 175,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -512,19 +538,19 @@ function PilotPage() {
                                                                 onChange: update("email")
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                                lineNumber: 157,
+                                                                lineNumber: 178,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/pilot-page.tsx",
-                                                        lineNumber: 153,
+                                                        lineNumber: 174,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                lineNumber: 146,
+                                                lineNumber: 167,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -538,7 +564,7 @@ function PilotPage() {
                                                                 children: "Company"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                                lineNumber: 163,
+                                                                lineNumber: 184,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -549,13 +575,13 @@ function PilotPage() {
                                                                 onChange: update("company")
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                                lineNumber: 164,
+                                                                lineNumber: 185,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/pilot-page.tsx",
-                                                        lineNumber: 162,
+                                                        lineNumber: 183,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -566,7 +592,7 @@ function PilotPage() {
                                                                 children: "Your role"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                                lineNumber: 167,
+                                                                lineNumber: 188,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -577,24 +603,24 @@ function PilotPage() {
                                                                         children: r
                                                                     }, r, false, {
                                                                         fileName: "[project]/components/pilot-page.tsx",
-                                                                        lineNumber: 170,
+                                                                        lineNumber: 191,
                                                                         columnNumber: 27
                                                                     }, this))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                                lineNumber: 168,
+                                                                lineNumber: 189,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/pilot-page.tsx",
-                                                        lineNumber: 166,
+                                                        lineNumber: 187,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                lineNumber: 161,
+                                                lineNumber: 182,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -608,7 +634,7 @@ function PilotPage() {
                                                                 children: "Operation type"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                                lineNumber: 178,
+                                                                lineNumber: 199,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -619,18 +645,18 @@ function PilotPage() {
                                                                         children: o
                                                                     }, o, false, {
                                                                         fileName: "[project]/components/pilot-page.tsx",
-                                                                        lineNumber: 181,
+                                                                        lineNumber: 202,
                                                                         columnNumber: 27
                                                                     }, this))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                                lineNumber: 179,
+                                                                lineNumber: 200,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/pilot-page.tsx",
-                                                        lineNumber: 177,
+                                                        lineNumber: 198,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -641,7 +667,7 @@ function PilotPage() {
                                                                 children: "Region"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                                lineNumber: 186,
+                                                                lineNumber: 207,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -652,24 +678,24 @@ function PilotPage() {
                                                                         children: r
                                                                     }, r, false, {
                                                                         fileName: "[project]/components/pilot-page.tsx",
-                                                                        lineNumber: 189,
+                                                                        lineNumber: 210,
                                                                         columnNumber: 27
                                                                     }, this))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                                lineNumber: 187,
+                                                                lineNumber: 208,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/pilot-page.tsx",
-                                                        lineNumber: 185,
+                                                        lineNumber: 206,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                lineNumber: 176,
+                                                lineNumber: 197,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -683,7 +709,7 @@ function PilotPage() {
                                                                 children: "Put on autopilot first"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                                lineNumber: 197,
+                                                                lineNumber: 218,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -694,18 +720,18 @@ function PilotPage() {
                                                                         children: f
                                                                     }, f, false, {
                                                                         fileName: "[project]/components/pilot-page.tsx",
-                                                                        lineNumber: 200,
+                                                                        lineNumber: 221,
                                                                         columnNumber: 27
                                                                     }, this))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                                lineNumber: 198,
+                                                                lineNumber: 219,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/pilot-page.tsx",
-                                                        lineNumber: 196,
+                                                        lineNumber: 217,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -716,7 +742,7 @@ function PilotPage() {
                                                                 children: "Rough monthly volume"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                                lineNumber: 205,
+                                                                lineNumber: 226,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -727,19 +753,19 @@ function PilotPage() {
                                                                 onChange: update("volume")
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                                lineNumber: 206,
+                                                                lineNumber: 227,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/pilot-page.tsx",
-                                                        lineNumber: 204,
+                                                        lineNumber: 225,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                lineNumber: 195,
+                                                lineNumber: 216,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -750,7 +776,7 @@ function PilotPage() {
                                                         children: "Anything else? (optional)"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/pilot-page.tsx",
-                                                        lineNumber: 211,
+                                                        lineNumber: 232,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -760,13 +786,13 @@ function PilotPage() {
                                                         onChange: update("message")
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/pilot-page.tsx",
-                                                        lineNumber: 212,
+                                                        lineNumber: 233,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                lineNumber: 210,
+                                                lineNumber: 231,
                                                 columnNumber: 19
                                             }, this),
                                             error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -777,14 +803,14 @@ function PilotPage() {
                                                         children: "⚠"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/pilot-page.tsx",
-                                                        lineNumber: 217,
+                                                        lineNumber: 238,
                                                         columnNumber: 23
                                                     }, this),
                                                     error
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                lineNumber: 216,
+                                                lineNumber: 237,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -793,20 +819,22 @@ function PilotPage() {
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                         type: "submit",
                                                         className: "sq-btn sq-btn-primary",
+                                                        disabled: submitting,
                                                         children: [
-                                                            "Request a pilot ",
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            submitting ? "Sending…" : "Request a pilot",
+                                                            " ",
+                                                            !submitting && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                 className: "arw",
                                                                 children: "→"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                                lineNumber: 224,
-                                                                columnNumber: 39
+                                                                lineNumber: 245,
+                                                                columnNumber: 85
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/pilot-page.tsx",
-                                                        lineNumber: 223,
+                                                        lineNumber: 244,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -815,48 +843,48 @@ function PilotPage() {
                                                             "We’ll only use this to talk to you about Stoqr.",
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                                lineNumber: 228,
+                                                                lineNumber: 249,
                                                                 columnNumber: 23
                                                             }, this),
                                                             "No spam, no sharing — data handled per GDPR / PDPA / DPDPA."
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/pilot-page.tsx",
-                                                        lineNumber: 226,
+                                                        lineNumber: 247,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/pilot-page.tsx",
-                                                lineNumber: 222,
+                                                lineNumber: 243,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/pilot-page.tsx",
-                                        lineNumber: 145,
+                                        lineNumber: 166,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/pilot-page.tsx",
-                                lineNumber: 141,
+                                lineNumber: 162,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/pilot-page.tsx",
-                        lineNumber: 109,
+                        lineNumber: 130,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/pilot-page.tsx",
-                    lineNumber: 81,
+                    lineNumber: 102,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/pilot-page.tsx",
-                lineNumber: 80,
+                lineNumber: 101,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -872,7 +900,7 @@ function PilotPage() {
                                     children: "STOQR"
                                 }, void 0, false, {
                                     fileName: "[project]/components/pilot-page.tsx",
-                                    lineNumber: 242,
+                                    lineNumber: 263,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -880,13 +908,13 @@ function PilotPage() {
                                     children: "© 2026 Stoqr. All rights reserved."
                                 }, void 0, false, {
                                     fileName: "[project]/components/pilot-page.tsx",
-                                    lineNumber: 243,
+                                    lineNumber: 264,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/pilot-page.tsx",
-                            lineNumber: 241,
+                            lineNumber: 262,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -896,33 +924,33 @@ function PilotPage() {
                                 children: "LinkedIn ↗"
                             }, void 0, false, {
                                 fileName: "[project]/components/pilot-page.tsx",
-                                lineNumber: 246,
+                                lineNumber: 267,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/pilot-page.tsx",
-                            lineNumber: 245,
+                            lineNumber: 266,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/pilot-page.tsx",
-                    lineNumber: 240,
+                    lineNumber: 261,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/pilot-page.tsx",
-                lineNumber: 239,
+                lineNumber: 260,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/pilot-page.tsx",
-        lineNumber: 68,
+        lineNumber: 89,
         columnNumber: 5
     }, this);
 }
-_s(PilotPage, "/Q+VNVfmQHVVZa+rqBPzSqMRFqo=");
+_s(PilotPage, "Ciq2W027F3fqRa1UGVaVZvhLPiU=");
 _c = PilotPage;
 var _c;
 __turbopack_context__.k.register(_c, "PilotPage");

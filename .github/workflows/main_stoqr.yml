@@ -23,6 +23,8 @@ jobs:
           cache: 'npm'
 
       - name: Install and build
+        env:
+          NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY: ${{ secrets.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY }}
         run: |
           npm ci
           npm run build
