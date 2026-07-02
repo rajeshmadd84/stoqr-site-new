@@ -374,11 +374,10 @@
 
 /* offices */
 .office-grid{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:1px;border:1px solid var(--border-subtle);border-radius:8px;
-  overflow:hidden;background:var(--border-subtle);margin-top:2.5rem;
+  display:grid;grid-template-columns:1fr;
+  gap:1rem;margin-top:2.5rem;max-width:480px;
 }
-.office{background:var(--bg-surface);padding:1.5rem}
+.office{background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:8px;padding:1.5rem}
 .office .flag{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-brand);margin-bottom:.6rem;font-weight:600}
 .office h4{font-size:15px;color:var(--fg-primary);margin-bottom:.3rem}
 .office address{font-style:normal;font-size:13px;color:var(--fg-secondary);line-height:1.6}
@@ -432,7 +431,7 @@
   .prob-grid,.pipe-grid,.mod-grid,.seg-grid,.team-grid{grid-template-columns:1fr 1fr}
   .agent-wrap{grid-template-columns:1fr}
   .comp{grid-template-columns:1fr 1fr}
-  .office-grid{grid-template-columns:1fr}
+
 }
 @media(max-width:620px){
   .prob-grid,.mod-grid,.seg-grid,.team-grid,.comp{grid-template-columns:1fr}

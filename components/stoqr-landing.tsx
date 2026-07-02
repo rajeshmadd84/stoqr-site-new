@@ -605,17 +605,8 @@ export default function StoqrLanding() {
 
             <div className="office-grid" id="contact">
               <div className="office reveal">
-                <div className="flag">India</div>
-                <h4>Fraakt India Pvt. Ltd.</h4>
-                <address>
-                  A102, Bhavya Serene Apt, Kasavanahalli
-                  <br />
-                  560035, Bangalore, Karnataka, India
-                </address>
-              </div>
-              <div className="office reveal">
                 <div className="flag">Singapore</div>
-                <h4>C/O Rio Logistics Pte Ltd</h4>
+                <h4>Stoqr Singapore Pte. Ltd.</h4>
                 <address>
                   21 Pandan Avenue #04-A, Senkee Logistics Hub
                   <br />
