@@ -69,7 +69,7 @@
   -webkit-font-smoothing: antialiased;
   font-size: 15px;
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .stoqr-root ::selection {
@@ -1095,11 +1095,16 @@
   font-size: 10px;
 }
 
+.sec-alt {
+  background: var(--bg-sunken);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
 .office-grid {
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  max-width: 480px;
-  margin-top: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  max-width: 760px;
   display: grid;
 }
 
@@ -1107,7 +1112,8 @@
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: 8px;
-  padding: 1.5rem;
+  min-height: 200px;
+  padding: 2rem;
 }
 
 .office .flag {
@@ -1115,22 +1121,40 @@
   letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--fg-brand);
-  margin-bottom: .6rem;
-  font-size: 10px;
+  margin-bottom: .75rem;
+  font-size: 11px;
   font-weight: 600;
 }
 
 .office h4 {
   color: var(--fg-primary);
-  margin-bottom: .3rem;
-  font-size: 15px;
+  margin-bottom: .5rem;
+  font-size: 17px;
 }
 
 .office address {
   color: var(--fg-secondary);
-  font-size: 13px;
+  font-size: 14px;
   font-style: normal;
-  line-height: 1.6;
+  line-height: 1.75;
+}
+
+.office .reg {
+  font-family: var(--mono);
+  color: var(--fg-muted);
+  letter-spacing: .03em;
+  margin-top: .75rem;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.office address a {
+  color: var(--fg-brand);
+  transition: color .15s;
+}
+
+.office address a:hover {
+  color: var(--brand-blue-deep);
 }
 
 .cta {
@@ -1232,18 +1256,18 @@
 
 .foot-copy {
   font-family: var(--mono);
-  color: var(--slate-600);
+  color: #fff;
   font-size: 11px;
 }
 
 .foot-right a {
-  color: var(--slate-500);
+  color: #fff;
   font-size: 13px;
   transition: color .15s;
 }
 
 .foot-right a:hover {
-  color: #fff;
+  color: var(--brand-blue-bright);
 }
 
 .reveal {

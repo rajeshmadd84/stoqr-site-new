@@ -261,7 +261,7 @@ export default function PilotPage() {
         <div className="sq-wrap foot-inner">
           <div className="foot-left">
             <span className="foot-brand">STOQR</span>
-            <span className="foot-copy">© 2026 Stoqr. All rights reserved.</span>
+            <span className="foot-copy">© 2026 Stoqr SIngapore Pte. Ltd. All rights reserved.</span>
           </div>
           <div className="foot-right">
             <a href={LINKEDIN_URL}>LinkedIn ↗</a>

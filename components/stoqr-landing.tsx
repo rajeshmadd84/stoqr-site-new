@@ -18,7 +18,7 @@ import Image from "next/image";
 
 /* ---------- content (edit copy here) ---------- */
 
-const PILOT_URL = "https://getstoqr.com/pilot";
+const PILOT_URL = "/pilot";
 const LINKEDIN_URL = "https://www.linkedin.com/company/getstoqr";
 
 const navLinks = [
@@ -231,9 +231,6 @@ function Nav() {
           ))}
         </nav>
         <div className="nav-cta">
-          <a href={PILOT_URL} className="sq-btn sq-btn-ghost">
-            Sign in
-          </a>
           <a href={PILOT_URL} className="sq-btn sq-btn-primary">
             Start a pilot <span className="arw">→</span>
           </a>
@@ -585,7 +582,7 @@ export default function StoqrLanding() {
           </div>
         </section>
 
-        {/* TEAM + OFFICES */}
+        {/* TEAM */}
         <section className="sec" id="team">
           <div className="sq-wrap">
             <div className="sec-head reveal">
@@ -602,15 +599,35 @@ export default function StoqrLanding() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
 
-            <div className="office-grid" id="contact">
+        {/* OFFICES + CONTACT */}
+        <section className="sec sec-alt" id="contact">
+          <div className="sq-wrap">
+            <div className="sec-head reveal">
+              <span className="eyebrow">Get in touch</span>
+              <h2>Where to find us</h2>
+              <p>Reach out directly, or drop by our Singapore office.</p>
+            </div>
+            <div className="office-grid">
               <div className="office reveal">
-                <div className="flag">Singapore</div>
+                <div className="flag">HQ</div>
                 <h4>Stoqr Singapore Pte. Ltd.</h4>
                 <address>
                   #15-01,MIDDLE ROAD, FORTUNE CENTRE
                   <br />
                   Singapore 188979
+                </address>
+                <div className="reg">UEN: 202628772K</div>
+              </div>
+              <div className="office reveal">
+                <div className="flag">Contact</div>
+                <h4>Say hello</h4>
+                <address>
+                  Email: <a href="mailto:hello@getstoqr.com">hello@getstoqr.com</a>
+                  <br />
+                  Telephone: <a href="tel:+6590413331">+65 9041 3331</a>
                 </address>
               </div>
             </div>
@@ -651,7 +668,7 @@ export default function StoqrLanding() {
         <div className="sq-wrap foot-inner">
           <div className="foot-left">
             <span className="foot-brand">STOQR</span>
-            <span className="foot-copy">© 2026 Stoqr. All rights reserved.</span>
+            <span className="foot-copy">© 2026 Stoqr Singapore Pte. Ltd. All rights reserved.</span>
           </div>
           <div className="foot-right">
             <a href={LINKEDIN_URL}>LinkedIn ↗</a>
