@@ -1096,18 +1096,17 @@
 }
 
 .office-grid {
-  border: 1px solid var(--border-subtle);
-  background: var(--border-subtle);
-  border-radius: 8px;
-  grid-template-columns: 1fr 1fr;
-  gap: 1px;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 480px;
   margin-top: 2.5rem;
   display: grid;
-  overflow: hidden;
 }
 
 .office {
   background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
   padding: 1.5rem;
 }
 
@@ -1300,10 +1299,6 @@
 
   .comp {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .office-grid {
-    grid-template-columns: 1fr;
   }
 }
 
