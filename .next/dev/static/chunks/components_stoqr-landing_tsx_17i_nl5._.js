@@ -19,36 +19,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
      - This file is a client component (needs state for the mobile menu
        and an IntersectionObserver for scroll reveals).
    ============================================================ */ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 ;
-var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature();
+var _s = __turbopack_context__.k.signature();
 "use client";
-;
 ;
 /* ---------- content (edit copy here) ---------- */ const PILOT_URL = "/pilot";
 const LINKEDIN_URL = "https://www.linkedin.com/company/getstoqr";
-const navLinks = [
-    {
-        href: "#platform",
-        label: "Platform"
-    },
-    {
-        href: "#how",
-        label: "How it works"
-    },
-    {
-        href: "#modules",
-        label: "Modules"
-    },
-    {
-        href: "#agentic",
-        label: "Agentic AI"
-    },
-    {
-        href: "#contact",
-        label: "Contact"
-    }
-];
 const rackPattern = [
     [
         "full pulse",
@@ -352,7 +328,7 @@ const agentLog = [
                     children: "14 lines"
                 }, void 0, false, {
                     fileName: "[project]/components/stoqr-landing.tsx",
-                    lineNumber: 198,
+                    lineNumber: 191,
                     columnNumber: 46
                 }, ("TURBOPACK compile-time value", void 0)),
                 " · ordered by location"
@@ -369,7 +345,7 @@ const agentLog = [
                     children: "⚠ short pick"
                 }, void 0, false, {
                     fileName: "[project]/components/stoqr-landing.tsx",
-                    lineNumber: 199,
+                    lineNumber: 192,
                     columnNumber: 39
                 }, ("TURBOPACK compile-time value", void 0)),
                 " at F2-A03-R12-L4 · qty 6 of 10"
@@ -391,7 +367,7 @@ const agentLog = [
                     children: "✓ resolved"
                 }, void 0, false, {
                     fileName: "[project]/components/stoqr-landing.tsx",
-                    lineNumber: 201,
+                    lineNumber: 194,
                     columnNumber: 28
                 }, ("TURBOPACK compile-time value", void 0)),
                 " · line complete · no hold"
@@ -408,7 +384,7 @@ const agentLog = [
                     children: "3 cartons"
                 }, void 0, false, {
                     fileName: "[project]/components/stoqr-landing.tsx",
-                    lineNumber: 202,
+                    lineNumber: 195,
                     columnNumber: 44
                 }, ("TURBOPACK compile-time value", void 0)),
                 " · 41.2 kg"
@@ -425,7 +401,7 @@ const agentLog = [
                     children: "DSP-2207"
                 }, void 0, false, {
                     fileName: "[project]/components/stoqr-landing.tsx",
-                    lineNumber: 203,
+                    lineNumber: 196,
                     columnNumber: 59
                 }, ("TURBOPACK compile-time value", void 0))
             ]
@@ -441,7 +417,7 @@ const agentLog = [
                     children: "✓ job complete"
                 }, void 0, false, {
                     fileName: "[project]/components/stoqr-landing.tsx",
-                    lineNumber: 204,
+                    lineNumber: 197,
                     columnNumber: 39
                 }, ("TURBOPACK compile-time value", void 0)),
                 " · billed to wallet"
@@ -464,7 +440,7 @@ const agentLog = [
                 strokeWidth: "1.5"
             }, void 0, false, {
                 fileName: "[project]/components/stoqr-landing.tsx",
-                lineNumber: 212,
+                lineNumber: 205,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -475,113 +451,17 @@ const agentLog = [
                 strokeLinejoin: "round"
             }, void 0, false, {
                 fileName: "[project]/components/stoqr-landing.tsx",
-                lineNumber: 213,
+                lineNumber: 206,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/stoqr-landing.tsx",
-        lineNumber: 211,
+        lineNumber: 204,
         columnNumber: 5
     }, this);
 }
 _c = Check;
-function Nav() {
-    _s();
-    const [open, setOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
-        className: "nav",
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "sq-wrap nav-inner",
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                    href: "#top",
-                    className: "brand",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                        src: "/images/logo.svg",
-                        alt: "Stoqr",
-                        width: 120,
-                        height: 36,
-                        priority: true
-                    }, void 0, false, {
-                        fileName: "[project]/components/stoqr-landing.tsx",
-                        lineNumber: 224,
-                        columnNumber: 11
-                    }, this)
-                }, void 0, false, {
-                    fileName: "[project]/components/stoqr-landing.tsx",
-                    lineNumber: 223,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
-                    className: `nav-links${open ? " open" : ""}`,
-                    children: navLinks.map((l)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            href: l.href,
-                            onClick: ()=>setOpen(false),
-                            children: l.label
-                        }, l.href, false, {
-                            fileName: "[project]/components/stoqr-landing.tsx",
-                            lineNumber: 228,
-                            columnNumber: 13
-                        }, this))
-                }, void 0, false, {
-                    fileName: "[project]/components/stoqr-landing.tsx",
-                    lineNumber: 226,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "nav-cta",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            href: PILOT_URL,
-                            className: "sq-btn sq-btn-primary",
-                            children: [
-                                "Start a pilot ",
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "arw",
-                                    children: "→"
-                                }, void 0, false, {
-                                    fileName: "[project]/components/stoqr-landing.tsx",
-                                    lineNumber: 235,
-                                    columnNumber: 27
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/components/stoqr-landing.tsx",
-                            lineNumber: 234,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                            className: "menu-toggle",
-                            onClick: ()=>setOpen((v)=>!v),
-                            "aria-expanded": open,
-                            "aria-label": "Toggle menu",
-                            children: "☰"
-                        }, void 0, false, {
-                            fileName: "[project]/components/stoqr-landing.tsx",
-                            lineNumber: 237,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/components/stoqr-landing.tsx",
-                    lineNumber: 233,
-                    columnNumber: 9
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "[project]/components/stoqr-landing.tsx",
-            lineNumber: 222,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
-        fileName: "[project]/components/stoqr-landing.tsx",
-        lineNumber: 221,
-        columnNumber: 5
-    }, this);
-}
-_s(Nav, "xG1TONbKtDWtdOTrXaTAsNhPg/Q=");
-_c1 = Nav;
 function WarehouseFloor() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "floor",
@@ -594,7 +474,7 @@ function WarehouseFloor() {
                         children: "Warehouse Floor — WH-SG-01"
                     }, void 0, false, {
                         fileName: "[project]/components/stoqr-landing.tsx",
-                        lineNumber: 255,
+                        lineNumber: 215,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -602,20 +482,20 @@ function WarehouseFloor() {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {}, void 0, false, {
                                 fileName: "[project]/components/stoqr-landing.tsx",
-                                lineNumber: 257,
+                                lineNumber: 217,
                                 columnNumber: 11
                             }, this),
                             "LIVE"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/stoqr-landing.tsx",
-                        lineNumber: 256,
+                        lineNumber: 216,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/stoqr-landing.tsx",
-                lineNumber: 254,
+                lineNumber: 214,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -629,23 +509,23 @@ function WarehouseFloor() {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {}, void 0, false, {
                                         fileName: "[project]/components/stoqr-landing.tsx",
-                                        lineNumber: 264,
+                                        lineNumber: 224,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {}, void 0, false, {
                                         fileName: "[project]/components/stoqr-landing.tsx",
-                                        lineNumber: 265,
+                                        lineNumber: 225,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {}, void 0, false, {
                                         fileName: "[project]/components/stoqr-landing.tsx",
-                                        lineNumber: 266,
+                                        lineNumber: 226,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/stoqr-landing.tsx",
-                                lineNumber: 263,
+                                lineNumber: 223,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -654,14 +534,14 @@ function WarehouseFloor() {
                                     "Inbound",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                         fileName: "[project]/components/stoqr-landing.tsx",
-                                        lineNumber: 270,
+                                        lineNumber: 230,
                                         columnNumber: 13
                                     }, this),
                                     "Dock"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/stoqr-landing.tsx",
-                                lineNumber: 268,
+                                lineNumber: 228,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -669,13 +549,13 @@ function WarehouseFloor() {
                                 children: "DOOR 3"
                             }, void 0, false, {
                                 fileName: "[project]/components/stoqr-landing.tsx",
-                                lineNumber: 273,
+                                lineNumber: 233,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/stoqr-landing.tsx",
-                        lineNumber: 262,
+                        lineNumber: 222,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -692,7 +572,7 @@ function WarehouseFloor() {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 278,
+                                            lineNumber: 238,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -701,18 +581,18 @@ function WarehouseFloor() {
                                                     className: `bin${cls ? " " + cls : ""}`
                                                 }, j, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 281,
+                                                    lineNumber: 241,
                                                     columnNumber: 19
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 279,
+                                            lineNumber: 239,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, i, true, {
                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                    lineNumber: 277,
+                                    lineNumber: 237,
                                     columnNumber: 13
                                 }, this)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -729,18 +609,18 @@ function WarehouseFloor() {
                                         }
                                     }, i, false, {
                                         fileName: "[project]/components/stoqr-landing.tsx",
-                                        lineNumber: 288,
+                                        lineNumber: 248,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/stoqr-landing.tsx",
-                                lineNumber: 286,
+                                lineNumber: 246,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/stoqr-landing.tsx",
-                        lineNumber: 275,
+                        lineNumber: 235,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -751,23 +631,23 @@ function WarehouseFloor() {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {}, void 0, false, {
                                         fileName: "[project]/components/stoqr-landing.tsx",
-                                        lineNumber: 294,
+                                        lineNumber: 254,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {}, void 0, false, {
                                         fileName: "[project]/components/stoqr-landing.tsx",
-                                        lineNumber: 295,
+                                        lineNumber: 255,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {}, void 0, false, {
                                         fileName: "[project]/components/stoqr-landing.tsx",
-                                        lineNumber: 296,
+                                        lineNumber: 256,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/stoqr-landing.tsx",
-                                lineNumber: 293,
+                                lineNumber: 253,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -776,14 +656,14 @@ function WarehouseFloor() {
                                     "Outbound",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                         fileName: "[project]/components/stoqr-landing.tsx",
-                                        lineNumber: 300,
+                                        lineNumber: 260,
                                         columnNumber: 13
                                     }, this),
                                     "Dispatch"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/stoqr-landing.tsx",
-                                lineNumber: 298,
+                                lineNumber: 258,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -791,19 +671,19 @@ function WarehouseFloor() {
                                 children: "CARRIER"
                             }, void 0, false, {
                                 fileName: "[project]/components/stoqr-landing.tsx",
-                                lineNumber: 303,
+                                lineNumber: 263,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/stoqr-landing.tsx",
-                        lineNumber: 292,
+                        lineNumber: 252,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/stoqr-landing.tsx",
-                lineNumber: 261,
+                lineNumber: 221,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -815,14 +695,14 @@ function WarehouseFloor() {
                                 children: "F2-A03-R12-L4"
                             }, void 0, false, {
                                 fileName: "[project]/components/stoqr-landing.tsx",
-                                lineNumber: 308,
+                                lineNumber: 268,
                                 columnNumber: 11
                             }, this),
                             " · stored"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/stoqr-landing.tsx",
-                        lineNumber: 307,
+                        lineNumber: 267,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -831,14 +711,14 @@ function WarehouseFloor() {
                                 children: "GRN-4471"
                             }, void 0, false, {
                                 fileName: "[project]/components/stoqr-landing.tsx",
-                                lineNumber: 311,
+                                lineNumber: 271,
                                 columnNumber: 11
                             }, this),
                             " · generated"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/stoqr-landing.tsx",
-                        lineNumber: 310,
+                        lineNumber: 270,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -848,14 +728,14 @@ function WarehouseFloor() {
                                 children: "9385412"
                             }, void 0, false, {
                                 fileName: "[project]/components/stoqr-landing.tsx",
-                                lineNumber: 314,
+                                lineNumber: 274,
                                 columnNumber: 15
                             }, this),
                             " · MV Pacific Star"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/stoqr-landing.tsx",
-                        lineNumber: 313,
+                        lineNumber: 273,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -864,32 +744,32 @@ function WarehouseFloor() {
                                 children: "DSP-2207"
                             }, void 0, false, {
                                 fileName: "[project]/components/stoqr-landing.tsx",
-                                lineNumber: 317,
+                                lineNumber: 277,
                                 columnNumber: 11
                             }, this),
                             " · dispatched"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/stoqr-landing.tsx",
-                        lineNumber: 316,
+                        lineNumber: 276,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/stoqr-landing.tsx",
-                lineNumber: 306,
+                lineNumber: 266,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/stoqr-landing.tsx",
-        lineNumber: 253,
+        lineNumber: 213,
         columnNumber: 5
     }, this);
 }
-_c2 = WarehouseFloor;
+_c1 = WarehouseFloor;
 function StoqrLanding() {
-    _s1();
+    _s();
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "StoqrLanding.useEffect": ()=>{
             const els = document.querySelectorAll(".reveal");
@@ -922,7 +802,7 @@ function StoqrLanding() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Nav, {}, void 0, false, {
                 fileName: "[project]/components/stoqr-landing.tsx",
-                lineNumber: 346,
+                lineNumber: 306,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -934,7 +814,7 @@ function StoqrLanding() {
                                 className: "hero-grid-bg"
                             }, void 0, false, {
                                 fileName: "[project]/components/stoqr-landing.tsx",
-                                lineNumber: 351,
+                                lineNumber: 311,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -948,7 +828,7 @@ function StoqrLanding() {
                                                 children: "Warehousing & Transport · Agentic AI"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/stoqr-landing.tsx",
-                                                lineNumber: 354,
+                                                lineNumber: 314,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -956,7 +836,7 @@ function StoqrLanding() {
                                                     "Your warehouse,",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                         fileName: "[project]/components/stoqr-landing.tsx",
-                                                        lineNumber: 356,
+                                                        lineNumber: 316,
                                                         columnNumber: 32
                                                     }, this),
                                                     "on ",
@@ -967,13 +847,13 @@ function StoqrLanding() {
                                                         children: "autopilot."
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/stoqr-landing.tsx",
-                                                        lineNumber: 357,
+                                                        lineNumber: 317,
                                                         columnNumber: 20
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/stoqr-landing.tsx",
-                                                lineNumber: 355,
+                                                lineNumber: 315,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -981,7 +861,7 @@ function StoqrLanding() {
                                                 children: "Stoqr is an agentic platform for warehousing and transport. AI agents receive, store, pick, pack, dispatch, and bill — across every zone, in every region."
                                             }, void 0, false, {
                                                 fileName: "[project]/components/stoqr-landing.tsx",
-                                                lineNumber: 359,
+                                                lineNumber: 319,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -997,13 +877,13 @@ function StoqrLanding() {
                                                                 children: "→"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/stoqr-landing.tsx",
-                                                                lineNumber: 365,
+                                                                lineNumber: 325,
                                                                 columnNumber: 33
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/stoqr-landing.tsx",
-                                                        lineNumber: 364,
+                                                        lineNumber: 324,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1012,36 +892,36 @@ function StoqrLanding() {
                                                         children: "See how it works"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/stoqr-landing.tsx",
-                                                        lineNumber: 367,
+                                                        lineNumber: 327,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/stoqr-landing.tsx",
-                                                lineNumber: 363,
+                                                lineNumber: 323,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/stoqr-landing.tsx",
-                                        lineNumber: 353,
+                                        lineNumber: 313,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(WarehouseFloor, {}, void 0, false, {
                                         fileName: "[project]/components/stoqr-landing.tsx",
-                                        lineNumber: 373,
+                                        lineNumber: 333,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/stoqr-landing.tsx",
-                                lineNumber: 352,
+                                lineNumber: 312,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/stoqr-landing.tsx",
-                        lineNumber: 350,
+                        lineNumber: 310,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1054,7 +934,7 @@ function StoqrLanding() {
                                     children: "One platform · floor to invoice"
                                 }, void 0, false, {
                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                    lineNumber: 380,
+                                    lineNumber: 340,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1067,14 +947,14 @@ function StoqrLanding() {
                                                     children: "+"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 383,
+                                                    lineNumber: 343,
                                                     columnNumber: 28
                                                 }, this),
                                                 " 3PL storage"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 382,
+                                            lineNumber: 342,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1084,21 +964,21 @@ function StoqrLanding() {
                                                     children: "+"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 386,
+                                                    lineNumber: 346,
                                                     columnNumber: 24
                                                 }, this),
                                                 " maritime"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 385,
+                                            lineNumber: 345,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             children: "GDPR · PDPA · DPDPA"
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 388,
+                                            lineNumber: 348,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1107,7 +987,7 @@ function StoqrLanding() {
                                                     children: "SG"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 390,
+                                                    lineNumber: 350,
                                                     columnNumber: 17
                                                 }, this),
                                                 " · ",
@@ -1115,7 +995,7 @@ function StoqrLanding() {
                                                     children: "IN"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 390,
+                                                    lineNumber: 350,
                                                     columnNumber: 29
                                                 }, this),
                                                 " · ",
@@ -1123,30 +1003,30 @@ function StoqrLanding() {
                                                     children: "UAE"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 390,
+                                                    lineNumber: 350,
                                                     columnNumber: 41
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 389,
+                                            lineNumber: 349,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                    lineNumber: 381,
+                                    lineNumber: 341,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/stoqr-landing.tsx",
-                            lineNumber: 379,
+                            lineNumber: 339,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/stoqr-landing.tsx",
-                        lineNumber: 378,
+                        lineNumber: 338,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1163,7 +1043,7 @@ function StoqrLanding() {
                                             children: "The cost of the floor"
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 400,
+                                            lineNumber: 360,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1176,26 +1056,26 @@ function StoqrLanding() {
                                                     children: "They lose it on operations."
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 401,
+                                                    lineNumber: 361,
                                                     columnNumber: 62
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 401,
+                                            lineNumber: 361,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             children: "Racking is the cheap part. The expensive part is everything that happens between the inbound dock and the invoice — and most of it still runs on paper, spreadsheets, and memory."
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 402,
+                                            lineNumber: 362,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                    lineNumber: 399,
+                                    lineNumber: 359,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1208,43 +1088,43 @@ function StoqrLanding() {
                                                     children: c.id
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 410,
+                                                    lineNumber: 370,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                                     children: c.h
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 411,
+                                                    lineNumber: 371,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     children: c.p
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 412,
+                                                    lineNumber: 372,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, c.id, true, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 409,
+                                            lineNumber: 369,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                    lineNumber: 407,
+                                    lineNumber: 367,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/stoqr-landing.tsx",
-                            lineNumber: 398,
+                            lineNumber: 358,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/stoqr-landing.tsx",
-                        lineNumber: 397,
+                        lineNumber: 357,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1261,7 +1141,7 @@ function StoqrLanding() {
                                             children: "How Stoqr works"
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 423,
+                                            lineNumber: 383,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1274,13 +1154,13 @@ function StoqrLanding() {
                                                     children: "Stoqr runs every step."
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 424,
+                                                    lineNumber: 384,
                                                     columnNumber: 61
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 424,
+                                            lineNumber: 384,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1293,20 +1173,20 @@ function StoqrLanding() {
                                                     children: "flow"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 426,
+                                                    lineNumber: 386,
                                                     columnNumber: 47
                                                 }, this),
                                                 ": an ordered sequence of steps your team defines once. Upload a list, Stoqr spins up a job, and agents execute it — recording quantities, validating documents, updating stock, and generating the paperwork automatically."
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 425,
+                                            lineNumber: 385,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                    lineNumber: 422,
+                                    lineNumber: 382,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1319,21 +1199,21 @@ function StoqrLanding() {
                                                     children: s.zone
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 434,
+                                                    lineNumber: 394,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                                     children: s.h
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 435,
+                                                    lineNumber: 395,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     children: s.p
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 436,
+                                                    lineNumber: 396,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1344,41 +1224,41 @@ function StoqrLanding() {
                                                                     children: f.b
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                                    lineNumber: 440,
+                                                                    lineNumber: 400,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 f.t
                                                             ]
                                                         }, i, true, {
                                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                                            lineNumber: 439,
+                                                            lineNumber: 399,
                                                             columnNumber: 23
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 437,
+                                                    lineNumber: 397,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, s.zone, true, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 433,
+                                            lineNumber: 393,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                    lineNumber: 431,
+                                    lineNumber: 391,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/stoqr-landing.tsx",
-                            lineNumber: 421,
+                            lineNumber: 381,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/stoqr-landing.tsx",
-                        lineNumber: 420,
+                        lineNumber: 380,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1395,7 +1275,7 @@ function StoqrLanding() {
                                             children: "The platform"
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 455,
+                                            lineNumber: 415,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1408,26 +1288,26 @@ function StoqrLanding() {
                                                     children: "inbound dock to the invoice."
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 456,
+                                                    lineNumber: 416,
                                                     columnNumber: 40
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 456,
+                                            lineNumber: 416,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             children: "Eight modules built on a single flow engine and one source of inventory truth. Run fulfilment and 3PL storage in the same building — service type is set per job, not per client."
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 457,
+                                            lineNumber: 417,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                    lineNumber: 454,
+                                    lineNumber: 414,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1440,7 +1320,7 @@ function StoqrLanding() {
                                                     children: m.id
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 465,
+                                                    lineNumber: 425,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1450,14 +1330,14 @@ function StoqrLanding() {
                                                     children: m.h
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 466,
+                                                    lineNumber: 426,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     children: m.p
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 467,
+                                                    lineNumber: 427,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1466,34 +1346,34 @@ function StoqrLanding() {
                                                             children: t
                                                         }, t, false, {
                                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                                            lineNumber: 470,
+                                                            lineNumber: 430,
                                                             columnNumber: 23
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 468,
+                                                    lineNumber: 428,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, m.h, true, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 464,
+                                            lineNumber: 424,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                    lineNumber: 462,
+                                    lineNumber: 422,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/stoqr-landing.tsx",
-                            lineNumber: 453,
+                            lineNumber: 413,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/stoqr-landing.tsx",
-                        lineNumber: 452,
+                        lineNumber: 412,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1510,7 +1390,7 @@ function StoqrLanding() {
                                             children: "The agentic layer"
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 483,
+                                            lineNumber: 443,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1523,27 +1403,27 @@ function StoqrLanding() {
                                                     children: "They’re agents."
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 484,
+                                                    lineNumber: 444,
                                                     columnNumber: 50
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 484,
+                                            lineNumber: 444,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             children: "A flow in Stoqr isn’t a static set of boxes to tick. Each job is watched by AI agents that understand what the step is for, notice when something’s wrong, and act on it — before a human has to."
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 485,
+                                            lineNumber: 445,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             children: "The platform is backed by a logistics-trained small language model that sharpens with every job your warehouse runs. The more you operate, the better it gets at the work."
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 490,
+                                            lineNumber: 450,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1553,7 +1433,7 @@ function StoqrLanding() {
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Check, {}, void 0, false, {
                                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                                            lineNumber: 496,
+                                                            lineNumber: 456,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1565,27 +1445,27 @@ function StoqrLanding() {
                                                                     children: "Self-healing jobs."
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                                    lineNumber: 498,
+                                                                    lineNumber: 458,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 " Short pick on a line? The agent reallocates from another location and keeps the job moving instead of stalling for a supervisor."
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                                            lineNumber: 497,
+                                                            lineNumber: 457,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 495,
+                                                    lineNumber: 455,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Check, {}, void 0, false, {
                                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                                            lineNumber: 503,
+                                                            lineNumber: 463,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1597,27 +1477,27 @@ function StoqrLanding() {
                                                                     children: "Exceptions, not everything."
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                                    lineNumber: 505,
+                                                                    lineNumber: 465,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 " Variances get flagged, retries get attempted, and only the genuinely unusual reaches a person. Your team manages the edge cases, not the routine."
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                                            lineNumber: 504,
+                                                            lineNumber: 464,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 502,
+                                                    lineNumber: 462,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Check, {}, void 0, false, {
                                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                                            lineNumber: 510,
+                                                            lineNumber: 470,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1629,32 +1509,32 @@ function StoqrLanding() {
                                                                     children: "A data flywheel."
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                                    lineNumber: 512,
+                                                                    lineNumber: 472,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 " Every receipt, pick, and dispatch trains the model on your operation — so forecasts, allocations, and routing get sharper over time."
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                                            lineNumber: 511,
+                                                            lineNumber: 471,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 509,
+                                                    lineNumber: 469,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 494,
+                                            lineNumber: 454,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                    lineNumber: 482,
+                                    lineNumber: 442,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1668,20 +1548,20 @@ function StoqrLanding() {
                                                     children: "Agent log · JOB-8842"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 520,
+                                                    lineNumber: 480,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "OUTBOUND"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 521,
+                                                    lineNumber: 481,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 519,
+                                            lineNumber: 479,
                                             columnNumber: 15
                                         }, this),
                                         agentLog.map((line, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1692,37 +1572,37 @@ function StoqrLanding() {
                                                         children: line.t
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/stoqr-landing.tsx",
-                                                        lineNumber: 525,
+                                                        lineNumber: 485,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         children: line.body
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/stoqr-landing.tsx",
-                                                        lineNumber: 526,
+                                                        lineNumber: 486,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, i, true, {
                                                 fileName: "[project]/components/stoqr-landing.tsx",
-                                                lineNumber: 524,
+                                                lineNumber: 484,
                                                 columnNumber: 17
                                             }, this))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                    lineNumber: 518,
+                                    lineNumber: 478,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/stoqr-landing.tsx",
-                            lineNumber: 481,
+                            lineNumber: 441,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/stoqr-landing.tsx",
-                        lineNumber: 480,
+                        lineNumber: 440,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1739,27 +1619,27 @@ function StoqrLanding() {
                                             children: "Built for the way you operate"
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 537,
+                                            lineNumber: 497,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                             children: "From a single warehouse to a multi-region 3PL."
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 538,
+                                            lineNumber: 498,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             children: "Stoqr scales its isolation to your size — shared, schema-isolated, or a dedicated database — so a small operator and an enterprise run on the same product with the data boundaries each one needs."
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 539,
+                                            lineNumber: 499,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                    lineNumber: 536,
+                                    lineNumber: 496,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1772,14 +1652,14 @@ function StoqrLanding() {
                                                     children: s.tier
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 547,
+                                                    lineNumber: 507,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                                     children: s.h
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 548,
+                                                    lineNumber: 508,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1787,7 +1667,7 @@ function StoqrLanding() {
                                                     children: s.who
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 549,
+                                                    lineNumber: 509,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1795,12 +1675,12 @@ function StoqrLanding() {
                                                             children: p
                                                         }, p, false, {
                                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                                            lineNumber: 552,
+                                                            lineNumber: 512,
                                                             columnNumber: 23
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 550,
+                                                    lineNumber: 510,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1808,29 +1688,29 @@ function StoqrLanding() {
                                                     children: s.iso
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 555,
+                                                    lineNumber: 515,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, s.h, true, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 546,
+                                            lineNumber: 506,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                    lineNumber: 544,
+                                    lineNumber: 504,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/stoqr-landing.tsx",
-                            lineNumber: 535,
+                            lineNumber: 495,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/stoqr-landing.tsx",
-                        lineNumber: 534,
+                        lineNumber: 494,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1846,27 +1726,27 @@ function StoqrLanding() {
                                             children: "Trust & residency"
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 566,
+                                            lineNumber: 526,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                             children: "Compliance isn’t a bolt-on."
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 567,
+                                            lineNumber: 527,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             children: "It’s wired into the data model — so the goods, the documents, and the audit trail all stay where they’re supposed to."
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 568,
+                                            lineNumber: 528,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                    lineNumber: 565,
+                                    lineNumber: 525,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1879,43 +1759,43 @@ function StoqrLanding() {
                                                     children: c.ct
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 576,
+                                                    lineNumber: 536,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                                     children: c.h
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 577,
+                                                    lineNumber: 537,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     children: c.p
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 578,
+                                                    lineNumber: 538,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, c.h, true, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 575,
+                                            lineNumber: 535,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                    lineNumber: 573,
+                                    lineNumber: 533,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/stoqr-landing.tsx",
-                            lineNumber: 564,
+                            lineNumber: 524,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/stoqr-landing.tsx",
-                        lineNumber: 563,
+                        lineNumber: 523,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1932,27 +1812,27 @@ function StoqrLanding() {
                                             children: "The team"
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 589,
+                                            lineNumber: 549,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                             children: "People behind Stoqr"
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 590,
+                                            lineNumber: 550,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            children: "Operators and builders shipping warehousing software out of Bangalore and Singapore."
+                                            children: "Operators and builders shipping warehousing software out of Singapore and Amaravati."
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 591,
+                                            lineNumber: 551,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                    lineNumber: 588,
+                                    lineNumber: 548,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1965,14 +1845,14 @@ function StoqrLanding() {
                                                     children: p.initials
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 596,
+                                                    lineNumber: 556,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                                     children: p.name
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 597,
+                                                    lineNumber: 557,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1980,29 +1860,29 @@ function StoqrLanding() {
                                                     children: p.role
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 598,
+                                                    lineNumber: 558,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, p.name, true, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 595,
+                                            lineNumber: 555,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                    lineNumber: 593,
+                                    lineNumber: 553,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/stoqr-landing.tsx",
-                            lineNumber: 587,
+                            lineNumber: 547,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/stoqr-landing.tsx",
-                        lineNumber: 586,
+                        lineNumber: 546,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -2019,27 +1899,27 @@ function StoqrLanding() {
                                             children: "Get in touch"
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 609,
+                                            lineNumber: 569,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                             children: "Where to find us"
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 610,
+                                            lineNumber: 570,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             children: "Reach out directly, or drop by our Singapore office."
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 611,
+                                            lineNumber: 571,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                    lineNumber: 608,
+                                    lineNumber: 568,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2053,14 +1933,14 @@ function StoqrLanding() {
                                                     children: "HQ"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 615,
+                                                    lineNumber: 575,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                                     children: "Stoqr Singapore Pte. Ltd."
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 616,
+                                                    lineNumber: 576,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("address", {
@@ -2068,14 +1948,14 @@ function StoqrLanding() {
                                                         "#15-01,MIDDLE ROAD, FORTUNE CENTRE",
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                                            lineNumber: 619,
+                                                            lineNumber: 579,
                                                             columnNumber: 19
                                                         }, this),
                                                         "Singapore 188979"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 617,
+                                                    lineNumber: 577,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2083,13 +1963,13 @@ function StoqrLanding() {
                                                     children: "UEN: 202628772K"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 622,
+                                                    lineNumber: 582,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 614,
+                                            lineNumber: 574,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2100,14 +1980,14 @@ function StoqrLanding() {
                                                     children: "Contact"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 625,
+                                                    lineNumber: 585,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                                     children: "Say hello"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 626,
+                                                    lineNumber: 586,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("address", {
@@ -2118,12 +1998,12 @@ function StoqrLanding() {
                                                             children: "hello@getstoqr.com"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                                            lineNumber: 628,
+                                                            lineNumber: 588,
                                                             columnNumber: 26
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                                            lineNumber: 629,
+                                                            lineNumber: 589,
                                                             columnNumber: 19
                                                         }, this),
                                                         "Telephone: ",
@@ -2132,36 +2012,36 @@ function StoqrLanding() {
                                                             children: "+65 9041 3331"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                                            lineNumber: 630,
+                                                            lineNumber: 590,
                                                             columnNumber: 30
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 627,
+                                                    lineNumber: 587,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 624,
+                                            lineNumber: 584,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                    lineNumber: 613,
+                                    lineNumber: 573,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/stoqr-landing.tsx",
-                            lineNumber: 607,
+                            lineNumber: 567,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/stoqr-landing.tsx",
-                        lineNumber: 606,
+                        lineNumber: 566,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -2171,7 +2051,7 @@ function StoqrLanding() {
                                 className: "cta-bg"
                             }, void 0, false, {
                                 fileName: "[project]/components/stoqr-landing.tsx",
-                                lineNumber: 639,
+                                lineNumber: 599,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2187,7 +2067,7 @@ function StoqrLanding() {
                                             children: "Start a pilot"
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 642,
+                                            lineNumber: 602,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2195,7 +2075,7 @@ function StoqrLanding() {
                                                 "See Stoqr run",
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 647,
+                                                    lineNumber: 607,
                                                     columnNumber: 17
                                                 }, this),
                                                 "your ",
@@ -2206,20 +2086,20 @@ function StoqrLanding() {
                                                     children: "warehouse."
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 648,
+                                                    lineNumber: 608,
                                                     columnNumber: 22
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 645,
+                                            lineNumber: 605,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             children: "Put one flow on autopilot and watch it work — from the inbound dock to the invoice."
                                         }, void 0, false, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 650,
+                                            lineNumber: 610,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2235,13 +2115,13 @@ function StoqrLanding() {
                                                             children: "→"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                                            lineNumber: 655,
+                                                            lineNumber: 615,
                                                             columnNumber: 33
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 654,
+                                                    lineNumber: 614,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -2250,36 +2130,36 @@ function StoqrLanding() {
                                                     children: "Follow on LinkedIn"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                                    lineNumber: 657,
+                                                    lineNumber: 617,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/stoqr-landing.tsx",
-                                            lineNumber: 653,
+                                            lineNumber: 613,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                    lineNumber: 641,
+                                    lineNumber: 601,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/stoqr-landing.tsx",
-                                lineNumber: 640,
+                                lineNumber: 600,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/stoqr-landing.tsx",
-                        lineNumber: 638,
+                        lineNumber: 598,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/stoqr-landing.tsx",
-                lineNumber: 348,
+                lineNumber: 308,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -2295,7 +2175,7 @@ function StoqrLanding() {
                                     children: "STOQR"
                                 }, void 0, false, {
                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                    lineNumber: 670,
+                                    lineNumber: 630,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2303,13 +2183,13 @@ function StoqrLanding() {
                                     children: "© 2026 Stoqr Singapore Pte. Ltd. All rights reserved."
                                 }, void 0, false, {
                                     fileName: "[project]/components/stoqr-landing.tsx",
-                                    lineNumber: 671,
+                                    lineNumber: 631,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/stoqr-landing.tsx",
-                            lineNumber: 669,
+                            lineNumber: 629,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2319,39 +2199,38 @@ function StoqrLanding() {
                                 children: "LinkedIn ↗"
                             }, void 0, false, {
                                 fileName: "[project]/components/stoqr-landing.tsx",
-                                lineNumber: 674,
+                                lineNumber: 634,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/stoqr-landing.tsx",
-                            lineNumber: 673,
+                            lineNumber: 633,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/stoqr-landing.tsx",
-                    lineNumber: 668,
+                    lineNumber: 628,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/stoqr-landing.tsx",
-                lineNumber: 667,
+                lineNumber: 627,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/stoqr-landing.tsx",
-        lineNumber: 345,
+        lineNumber: 305,
         columnNumber: 5
     }, this);
 }
-_s1(StoqrLanding, "OD7bBpZva5O2jO+Puf00hKivP7c=");
-_c3 = StoqrLanding;
-var _c, _c1, _c2, _c3;
+_s(StoqrLanding, "OD7bBpZva5O2jO+Puf00hKivP7c=");
+_c2 = StoqrLanding;
+var _c, _c1, _c2;
 __turbopack_context__.k.register(_c, "Check");
-__turbopack_context__.k.register(_c1, "Nav");
-__turbopack_context__.k.register(_c2, "WarehouseFloor");
-__turbopack_context__.k.register(_c3, "StoqrLanding");
+__turbopack_context__.k.register(_c1, "WarehouseFloor");
+__turbopack_context__.k.register(_c2, "StoqrLanding");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
