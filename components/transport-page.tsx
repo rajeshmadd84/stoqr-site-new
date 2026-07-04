@@ -13,11 +13,11 @@ import SiteFooter from "./site-footer";
 
 /* ---------- content (edit copy here) ---------- */
 
-const PILOT_URL = "/pilot";
+const PILOT_URL = "/contact";
 const LINKEDIN_URL = "https://www.linkedin.com/company/getstoqr";
 
 const problems = [
-  { id: "ISSUE 01", h: "Latency", p: "Decomposing a shipment, contacting several partners per leg, and chasing replies takes hours to days. The forwarder who answers fastest with a competitive price usually wins the business." },
+  { id: "ISSUE 01", h: "Latency", p: "Breaking down a shipment, contacting several partners per leg, and chasing replies takes hours to days. The forwarder who answers fastest with a competitive price usually wins the business." },
   { id: "ISSUE 02", h: "Manual effort", p: "Skilled staff spend a large share of the day reading, copying, and re-emailing rates — not on the judgement and relationship work that actually adds value." },
   { id: "ISSUE 03", h: "Inconsistency", p: "Which legs get priced, which partners get asked, and what margin gets applied all depend on who is at the desk. Quotes get mis-transcribed; options get missed." },
   { id: "ISSUE 04", h: "No memory", p: "Rates, partner performance, and negotiation history sit scattered across mailboxes, so the business cannot easily learn from its own data." },
@@ -31,7 +31,7 @@ const zones = [
     flow: [
       { b: "Classify intent", t: " · RFQ, selection, negotiation" },
       { b: "Extract shipment", t: " · origin, mode, commodity" },
-      { b: "Decompose", t: " into ordered service legs" },
+      { b: "Breakdown", t: " into ordered service legs" },
     ],
   },
   {
@@ -64,7 +64,7 @@ const orchestrator = {
 
 const workers = [
   { id: "AGENT · 01", h: "Intake & Intent", p: "Classifies the intent of each incoming email and extracts a structured shipment request from free text.", tags: ["Intent", "Extraction"] },
-  { id: "AGENT · 02", h: "Shipment Decomposition", p: "Breaks a shipment into its ordered service components using a service-component ontology plus LLM reasoning over its attributes.", tags: ["Ontology", "Legs"] },
+  { id: "AGENT · 02", h: "Shipment breakdown", p: "Breaks a shipment into its ordered service components using a service-component ontology plus LLM reasoning over its attributes.", tags: ["Ontology", "Legs"] },
   { id: "AGENT · 03", h: "Partner Matching", p: "Selects candidate partners for each component from the registry by capability, lane, mode, and service level — aided by retrieval.", tags: ["Registry", "Retrieval"] },
   { id: "AGENT · 04", h: "RFQ Dispatch", p: "Composes and sends a request for quotation to each selected partner per component, and tracks which requests are still outstanding.", tags: ["RFQ", "Tracking"] },
   { id: "AGENT · 05", h: "Quote Evaluation", p: "Parses partner replies; extracts and normalises price, currency, lead time, validity, and conditions; aggregates component quotes into options.", tags: ["Parse", "Normalise"] },
@@ -86,7 +86,7 @@ const legs: { n: string; b: string; loc: string; act?: boolean }[] = [
 
 const hitl = [
   { b: "Approval gates.", t: " Nothing commits before review at the two points that matter — the client quotation, and every partner booking." },
-  { b: "Confidence-scored.", t: " Every extraction and decomposition carries a confidence score; anything below your threshold is routed to a review queue." },
+  { b: "Confidence-scored.", t: " Every extraction and breakdown carries a confidence score; anything below your threshold is routed to a review queue." },
   { b: "Bounded negotiation.", t: " A floor margin, a maximum discount, and a round limit — beyond which the Agent escalates to a person." },
   { b: "Full audit trail.", t: " Every agent action, tool call, and human decision is written to an immutable log." },
   { b: "Assisted or autonomous.", t: " Review every quote, or let low-value, high-confidence cases flow on their own. You set the dial." },
@@ -103,7 +103,7 @@ function Check() {
 
 const ffStages = [
   { key: "inbox", lbl: "Client email", val: "intent →", icon: (<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2.5" y="4.5" width="15" height="11" rx="1.5" strokeWidth="1.4" /><path d="M3 6l7 5 7-5" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" /></svg>) },
-  { key: "decompose", lbl: "Decompose", val: "7 legs", icon: (<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h5m0 0 3-4h4m-4 4 3 4h4" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" /></svg>) },
+  { key: "breakdown", lbl: "Breakdown", val: "7 legs", icon: (<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h5m0 0 3-4h4m-4 4 3 4h4" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" /></svg>) },
   { key: "dispatch", lbl: "RFQ dispatch", val: "11 partners", icon: (<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M18 2 2 9l6 2.4L18 2 8.4 11.4 11 18 18 2Z" strokeWidth="1.3" strokeLinejoin="round" /></svg>) },
   { key: "evaluate", lbl: "Quotes in", val: "9 parsed", icon: (<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="3.5" width="14" height="13" rx="1.5" strokeWidth="1.4" /><path d="M6 8h8M6 11h8M6 14h5" strokeWidth="1.4" strokeLinecap="round" /></svg>) },
   { key: "rank", lbl: "Rank + margin", val: "2 options", icon: (<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 15V9M10 15V5M15 15v-3.5" strokeWidth="1.7" strokeLinecap="round" /></svg>) },
@@ -188,7 +188,7 @@ export default function TransportPage() {
                 Freight quotes, from inbox to booking. On <span style={{ color: "var(--brand-blue)" }}>autopilot.</span>
               </h1>
               <p className="hero-sub">
-                The Freight Quotation Agent is a Stoqr module that reads a client&rsquo;s email, decomposes the shipment
+                The Freight Quotation Agent is a Stoqr module that reads a client&rsquo;s email, breaks down the shipment
                 into its service legs, sources rates from your partners, and returns a ranked, margin-applied quote —
                 with your team in control of every commitment.
               </p>
@@ -228,7 +228,7 @@ export default function TransportPage() {
           <div className="sq-wrap">
             <div className="sec-head reveal">
               <span className="eyebrow">The cost of the inbox</span>
-              <h2>A freight quote still means a dozen emails and a day of waiting.</h2>
+              <h2>A freight quote still means <span style={{ color: "var(--danger)" }}>a dozen emails and a day of waiting.</span></h2>
               <p>
                 Forwarders coordinate international shipments over free-form email — reading requests, breaking them into
                 legs, chasing partner rates, and re-keying replies. It is slow, labour-intensive, and inconsistent, and
@@ -252,9 +252,9 @@ export default function TransportPage() {
           <div className="sq-wrap">
             <div className="sec-head reveal">
               <span className="eyebrow">The quotation loop</span>
-              <h2>One inbound email, run end to end.</h2>
+              <h2>One inbound email, <span style={{ color: "var(--brand-blue)" }}>run end to end.</span></h2>
               <p>
-                A client email arrives and the Agent takes it through the whole loop — intake and decomposition,
+                A client email arrives and the Agent takes it through the whole loop — intake and breakdown,
                 sourcing and evaluation, then a ranked quote, booking, and bounded negotiation. Every path ends in a
                 logged, closed state.
               </p>
@@ -269,7 +269,7 @@ export default function TransportPage() {
                     {s.flow.map((f, i) => (
                       <li key={i}>
                         <b>{f.b}</b>
-                        {f.t}
+                        <span className="pf-sub">{f.t}</span>
                       </li>
                     ))}
                   </ul>
@@ -312,14 +312,14 @@ export default function TransportPage() {
           </div>
         </section>
 
-        {/* DECOMPOSITION */}
-        <section className="sec" id="decomposition">
+        {/* BREAKDOWN */}
+        <section className="sec" id="breakdown">
           <div className="sq-wrap agent-wrap">
             <div className="agent-copy reveal">
-              <span className="eyebrow">Decomposition</span>
+              <span className="eyebrow">Breakdown</span>
               <h2>Every shipment, broken into priceable legs.</h2>
               <p>
-                Decomposition is the heart of the Agent. A shipment becomes an ordered chain of components — each
+                Breakdown is the heart of the Agent. A shipment becomes an ordered chain of components — each
                 separately sourceable and separately priced — grounded in an explicit ontology, so the output is
                 consistent and easy to validate against expert-labelled ground truth.
               </p>
@@ -334,7 +334,7 @@ export default function TransportPage() {
             </div>
             <div className="agent-panel reveal" aria-hidden="true">
               <div className="ap-head">
-                <span>Decomposition · SIN → HAM</span>
+                <span>Breakdown · SIN → HAM</span>
                 <span>PHARMA · REEFER</span>
               </div>
               {legs.map((l) => (

@@ -18,7 +18,7 @@ import WarehouseFloor from "./warehouse-floor";
 
 /* ---------- content (edit copy here) ---------- */
 
-const PILOT_URL = "/pilot";
+const PILOT_URL = "/contact";
 const LINKEDIN_URL = "https://www.linkedin.com/company/getstoqr";
 
 /* warehousing pillar — job console */
@@ -238,38 +238,6 @@ export default function StoqrLanding() {
                   <div className="role">{p.role}</div>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* OFFICES + CONTACT */}
-        <section className="sec sec-alt" id="contact">
-          <div className="sq-wrap">
-            <div className="sec-head reveal">
-              <span className="eyebrow">Get in touch</span>
-              <h2>Where to find us</h2>
-              <p>Reach out directly, or drop by our Singapore office.</p>
-            </div>
-            <div className="office-grid">
-              <div className="office reveal">
-                <div className="flag">HQ</div>
-                <h4>Stoqr Singapore Pte. Ltd.</h4>
-                <address>
-                  #15-01,MIDDLE ROAD, FORTUNE CENTRE
-                  <br />
-                  Singapore 188979
-                </address>
-                <div className="reg">UEN: 202628772K</div>
-              </div>
-              <div className="office reveal">
-                <div className="flag">Contact</div>
-                <h4>Say hello</h4>
-                <address>
-                  Email: <a href="mailto:hello@getstoqr.com">hello@getstoqr.com</a>
-                  <br />
-                  Telephone: <a href="tel:+6590413331">+65 9041 3331</a>
-                </address>
-              </div>
             </div>
           </div>
         </section>

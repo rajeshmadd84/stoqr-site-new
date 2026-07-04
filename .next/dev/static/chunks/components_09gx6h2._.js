@@ -14,7 +14,7 @@ var _s = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
-const PILOT_URL = "/pilot";
+const PILOT_URL = "/contact";
 const navLinks = [
     {
         href: "/",
@@ -29,7 +29,7 @@ const navLinks = [
         label: "Logistics"
     },
     {
-        href: "/#contact",
+        href: "/contact",
         label: "Contact"
     }
 ];
@@ -232,13 +232,13 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-/* ---------- content (edit copy here) ---------- */ const PILOT_URL = "/pilot";
+/* ---------- content (edit copy here) ---------- */ const PILOT_URL = "/contact";
 const LINKEDIN_URL = "https://www.linkedin.com/company/getstoqr";
 const problems = [
     {
         id: "ISSUE 01",
         h: "Latency",
-        p: "Decomposing a shipment, contacting several partners per leg, and chasing replies takes hours to days. The forwarder who answers fastest with a competitive price usually wins the business."
+        p: "Breaking down a shipment, contacting several partners per leg, and chasing replies takes hours to days. The forwarder who answers fastest with a competitive price usually wins the business."
     },
     {
         id: "ISSUE 02",
@@ -271,7 +271,7 @@ const zones = [
                 t: " · origin, mode, commodity"
             },
             {
-                b: "Decompose",
+                b: "Breakdown",
                 t: " into ordered service legs"
             }
         ]
@@ -332,7 +332,7 @@ const workers = [
     },
     {
         id: "AGENT · 02",
-        h: "Shipment Decomposition",
+        h: "Shipment breakdown",
         p: "Breaks a shipment into its ordered service components using a service-component ontology plus LLM reasoning over its attributes.",
         tags: [
             "Ontology",
@@ -446,7 +446,7 @@ const hitl = [
     },
     {
         b: "Confidence-scored.",
-        t: " Every extraction and decomposition carries a confidence score; anything below your threshold is routed to a review queue."
+        t: " Every extraction and breakdown carries a confidence score; anything below your threshold is routed to a review queue."
     },
     {
         b: "Bounded negotiation.",
@@ -539,8 +539,8 @@ const ffStages = [
         }, ("TURBOPACK compile-time value", void 0))
     },
     {
-        key: "decompose",
-        lbl: "Decompose",
+        key: "breakdown",
+        lbl: "Breakdown",
         val: "7 legs",
         icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
             width: "20",
@@ -962,7 +962,7 @@ function TransportPage() {
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "hero-sub",
-                                                children: "The Freight Quotation Agent is a Stoqr module that reads a client’s email, decomposes the shipment into its service legs, sources rates from your partners, and returns a ranked, margin-applied quote — with your team in control of every commitment."
+                                                children: "The Freight Quotation Agent is a Stoqr module that reads a client’s email, breaks down the shipment into its service legs, sources rates from your partners, and returns a ranked, margin-applied quote — with your team in control of every commitment."
                                             }, void 0, false, {
                                                 fileName: "[project]/components/transport-page.tsx",
                                                 lineNumber: 190,
@@ -1142,8 +1142,20 @@ function TransportPage() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                            children: "A freight quote still means a dozen emails and a day of waiting."
-                                        }, void 0, false, {
+                                            children: [
+                                                "A freight quote still means ",
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    style: {
+                                                        color: "var(--danger)"
+                                                    },
+                                                    children: "a dozen emails and a day of waiting."
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/transport-page.tsx",
+                                                    lineNumber: 231,
+                                                    columnNumber: 47
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/components/transport-page.tsx",
                                             lineNumber: 231,
                                             columnNumber: 15
@@ -1228,14 +1240,26 @@ function TransportPage() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                            children: "One inbound email, run end to end."
-                                        }, void 0, false, {
+                                            children: [
+                                                "One inbound email, ",
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    style: {
+                                                        color: "var(--brand-blue)"
+                                                    },
+                                                    children: "run end to end."
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/transport-page.tsx",
+                                                    lineNumber: 255,
+                                                    columnNumber: 38
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/components/transport-page.tsx",
                                             lineNumber: 255,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            children: "A client email arrives and the Agent takes it through the whole loop — intake and decomposition, sourcing and evaluation, then a ranked quote, booking, and bounded negotiation. Every path ends in a logged, closed state."
+                                            children: "A client email arrives and the Agent takes it through the whole loop — intake and breakdown, sourcing and evaluation, then a ranked quote, booking, and bounded negotiation. Every path ends in a logged, closed state."
                                         }, void 0, false, {
                                             fileName: "[project]/components/transport-page.tsx",
                                             lineNumber: 256,
@@ -1285,7 +1309,14 @@ function TransportPage() {
                                                                     lineNumber: 271,
                                                                     columnNumber: 25
                                                                 }, this),
-                                                                f.t
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "pf-sub",
+                                                                    children: f.t
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/components/transport-page.tsx",
+                                                                    lineNumber: 272,
+                                                                    columnNumber: 25
+                                                                }, this)
                                                             ]
                                                         }, i, true, {
                                                             fileName: "[project]/components/transport-page.tsx",
@@ -1455,7 +1486,7 @@ function TransportPage() {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                         className: "sec",
-                        id: "decomposition",
+                        id: "breakdown",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "sq-wrap agent-wrap",
                             children: [
@@ -1464,7 +1495,7 @@ function TransportPage() {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "eyebrow",
-                                            children: "Decomposition"
+                                            children: "Breakdown"
                                         }, void 0, false, {
                                             fileName: "[project]/components/transport-page.tsx",
                                             lineNumber: 319,
@@ -1478,7 +1509,7 @@ function TransportPage() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            children: "Decomposition is the heart of the Agent. A shipment becomes an ordered chain of components — each separately sourceable and separately priced — grounded in an explicit ontology, so the output is consistent and easy to validate against expert-labelled ground truth."
+                                            children: "Breakdown is the heart of the Agent. A shipment becomes an ordered chain of components — each separately sourceable and separately priced — grounded in an explicit ontology, so the output is consistent and easy to validate against expert-labelled ground truth."
                                         }, void 0, false, {
                                             fileName: "[project]/components/transport-page.tsx",
                                             lineNumber: 321,
@@ -1527,7 +1558,7 @@ function TransportPage() {
                                             className: "ap-head",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    children: "Decomposition · SIN → HAM"
+                                                    children: "Breakdown · SIN → HAM"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/transport-page.tsx",
                                                     lineNumber: 337,

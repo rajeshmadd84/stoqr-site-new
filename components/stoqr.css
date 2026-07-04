@@ -291,10 +291,11 @@
 .pipe-zone{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-brand);display:flex;align-items:center;gap:.5em;font-weight:600}
 .pipe-step h3{font-size:22px;margin:1rem 0 .7rem}
 .pipe-step p{font-size:14px;margin-bottom:1.2rem;color:var(--fg-secondary)}
-.pipe-flow{list-style:none;display:flex;flex-direction:column;gap:.45rem}
-.pipe-flow li{font-family:var(--mono);font-size:12px;color:var(--fg-muted);display:flex;align-items:center;gap:.5em;letter-spacing:.01em}
-.pipe-flow li::before{content:"▸";color:var(--fg-brand);font-size:10px}
-.pipe-flow li b{color:var(--fg-secondary);font-weight:500}
+.pipe-flow{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.pipe-flow li{font-family:var(--mono);font-size:12px;color:var(--fg-muted);position:relative;padding-left:14px;letter-spacing:.01em;line-height:1.5}
+.pipe-flow li::before{content:"▸";color:var(--fg-brand);font-size:10px;position:absolute;left:0;top:2px}
+.pipe-flow li b{display:block;color:var(--fg-secondary);font-weight:500}
+.pipe-flow li .pf-sub{display:block;font-size:11px;opacity:.85}
 
 /* modules */
 .mod-grid{
@@ -391,13 +392,16 @@
 .sec-alt{background:var(--bg-sunken);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle)}
 .office-grid{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:1.25rem;max-width:760px;
+  gap:1.25rem;max-width:1080px;
 }
 .office{background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:8px;padding:2rem;min-height:200px}
 .office .flag{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-brand);margin-bottom:.75rem;font-weight:600}
 .office h4{font-size:17px;color:var(--fg-primary);margin-bottom:.5rem}
 .office address{font-style:normal;font-size:14px;color:var(--fg-secondary);line-height:1.75}
 .office .reg{margin-top:.75rem;font-family:var(--mono);font-size:17px;color:var(--fg-muted);letter-spacing:.03em;font-weight:700}
+.office.office-map{padding:0;overflow:hidden}
+.map-embed{border-radius:8px;overflow:hidden;height:100%}
+.map-embed iframe{display:block;width:100%;height:100%;min-height:200px;border:0}
 .office address a{color:var(--fg-brand);transition:color 150ms}
 .office address a:hover{color:var(--brand-blue-deep)}
 

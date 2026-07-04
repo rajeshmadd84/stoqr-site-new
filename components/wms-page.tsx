@@ -15,7 +15,7 @@ import WarehouseFloor from "./warehouse-floor";
 
 /* ---------- content (edit copy here) ---------- */
 
-const PILOT_URL = "/pilot";
+const PILOT_URL = "/contact";
 const LINKEDIN_URL = "https://www.linkedin.com/company/getstoqr";
 
 const problems = [
@@ -122,8 +122,8 @@ const modules = [
   {
     id: "Module · Client portal",
     h: "Client portal",
-    p: "Your customers, self-served. A read-only window onto inventory, inbound, outbound, and invoices — with per-client visibility you control. One login spans every vendor a client works with.",
-    tags: ["Read-only views", "Per-client control", "Cross-vendor"],
+    p: "Your customers, self-served. Clients create and track their own inbound and outbound jobs, and see inventory and invoices in real time — with per-client permissions you set. One login spans every vendor a client works with.",
+    tags: ["Self-service jobs", "Per-client control", "Cross-vendor"],
     hPrimary: true,
   },
   {
@@ -141,7 +141,6 @@ const segments = [
     h: "SMB warehouses",
     who: "Single-site operators who want to retire the spreadsheets.",
     points: ["Full WMS: layout, inbound, outbound", "QR labels and cycle counts", "Self-serve onboarding"],
-    iso: "// Shared DB · row-level isolation",
     hPrimary: true,
   },
   {
@@ -149,7 +148,6 @@ const segments = [
     h: "Third-party logistics",
     who: "3PLs juggling many clients, many service types, one floor.",
     points: ["Per-client billing & invoicing", "Client portal with controlled visibility", "Bonded, maritime & procurement flows"],
-    iso: "// Schema-per-tenant isolation",
     feat: true,
     hPrimary: true,
   },
@@ -158,7 +156,6 @@ const segments = [
     h: "Enterprise & regulated",
     who: "Operations that need their data in their own region, full stop.",
     points: ["Dedicated database, optionally self-hosted", "SSO, granular RBAC & audit", "GDPR / PDPA / DPDPA residency"],
-    iso: "// Dedicated DB · EU · SG · IN",
     hPrimary: true,
   },
 ];
@@ -305,7 +302,7 @@ export default function WMSPage() {
                     {s.flow.map((f, i) => (
                       <li key={i}>
                         <b>{f.b}</b>
-                        {f.t}
+                        <span className="pf-sub">{f.t}</span>
                       </li>
                     ))}
                   </ul>
@@ -419,7 +416,6 @@ export default function WMSPage() {
                       <li key={p}>{p}</li>
                     ))}
                   </ul>
-                  <div className="iso">{s.iso}</div>
                 </div>
               ))}
             </div>

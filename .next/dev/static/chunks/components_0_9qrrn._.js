@@ -14,7 +14,7 @@ var _s = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
-const PILOT_URL = "/pilot";
+const PILOT_URL = "/contact";
 const navLinks = [
     {
         href: "/",
@@ -29,7 +29,7 @@ const navLinks = [
         label: "Logistics"
     },
     {
-        href: "/#contact",
+        href: "/contact",
         label: "Contact"
     }
 ];
@@ -588,7 +588,7 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-/* ---------- content (edit copy here) ---------- */ const PILOT_URL = "/pilot";
+/* ---------- content (edit copy here) ---------- */ const PILOT_URL = "/contact";
 const LINKEDIN_URL = "https://www.linkedin.com/company/getstoqr";
 const problems = [
     {
@@ -747,9 +747,9 @@ const modules = [
     {
         id: "Module · Client portal",
         h: "Client portal",
-        p: "Your customers, self-served. A read-only window onto inventory, inbound, outbound, and invoices — with per-client visibility you control. One login spans every vendor a client works with.",
+        p: "Your customers, self-served. Clients create and track their own inbound and outbound jobs, and see inventory and invoices in real time — with per-client permissions you set. One login spans every vendor a client works with.",
         tags: [
-            "Read-only views",
+            "Self-service jobs",
             "Per-client control",
             "Cross-vendor"
         ],
@@ -777,7 +777,6 @@ const segments = [
             "QR labels and cycle counts",
             "Self-serve onboarding"
         ],
-        iso: "// Shared DB · row-level isolation",
         hPrimary: true
     },
     {
@@ -789,7 +788,6 @@ const segments = [
             "Client portal with controlled visibility",
             "Bonded, maritime & procurement flows"
         ],
-        iso: "// Schema-per-tenant isolation",
         feat: true,
         hPrimary: true
     },
@@ -802,7 +800,6 @@ const segments = [
             "SSO, granular RBAC & audit",
             "GDPR / PDPA / DPDPA residency"
         ],
-        iso: "// Dedicated DB · EU · SG · IN",
         hPrimary: true
     }
 ];
@@ -839,7 +836,7 @@ const agentLog = [
                     children: "14 lines"
                 }, void 0, false, {
                     fileName: "[project]/components/wms-page.tsx",
-                    lineNumber: 174,
+                    lineNumber: 171,
                     columnNumber: 46
                 }, ("TURBOPACK compile-time value", void 0)),
                 " · ordered by location"
@@ -856,7 +853,7 @@ const agentLog = [
                     children: "⚠ short pick"
                 }, void 0, false, {
                     fileName: "[project]/components/wms-page.tsx",
-                    lineNumber: 175,
+                    lineNumber: 172,
                     columnNumber: 39
                 }, ("TURBOPACK compile-time value", void 0)),
                 " at F2-A03-R12-L4 · qty 6 of 10"
@@ -878,7 +875,7 @@ const agentLog = [
                     children: "✓ resolved"
                 }, void 0, false, {
                     fileName: "[project]/components/wms-page.tsx",
-                    lineNumber: 177,
+                    lineNumber: 174,
                     columnNumber: 28
                 }, ("TURBOPACK compile-time value", void 0)),
                 " · line complete · no hold"
@@ -895,7 +892,7 @@ const agentLog = [
                     children: "3 cartons"
                 }, void 0, false, {
                     fileName: "[project]/components/wms-page.tsx",
-                    lineNumber: 178,
+                    lineNumber: 175,
                     columnNumber: 44
                 }, ("TURBOPACK compile-time value", void 0)),
                 " · 41.2 kg"
@@ -912,7 +909,7 @@ const agentLog = [
                     children: "DSP-2207"
                 }, void 0, false, {
                     fileName: "[project]/components/wms-page.tsx",
-                    lineNumber: 179,
+                    lineNumber: 176,
                     columnNumber: 59
                 }, ("TURBOPACK compile-time value", void 0))
             ]
@@ -928,7 +925,7 @@ const agentLog = [
                     children: "✓ job complete"
                 }, void 0, false, {
                     fileName: "[project]/components/wms-page.tsx",
-                    lineNumber: 180,
+                    lineNumber: 177,
                     columnNumber: 39
                 }, ("TURBOPACK compile-time value", void 0)),
                 " · billed to wallet"
@@ -951,7 +948,7 @@ const agentLog = [
                 strokeWidth: "1.5"
             }, void 0, false, {
                 fileName: "[project]/components/wms-page.tsx",
-                lineNumber: 188,
+                lineNumber: 185,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -962,13 +959,13 @@ const agentLog = [
                 strokeLinejoin: "round"
             }, void 0, false, {
                 fileName: "[project]/components/wms-page.tsx",
-                lineNumber: 189,
+                lineNumber: 186,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/wms-page.tsx",
-        lineNumber: 187,
+        lineNumber: 184,
         columnNumber: 5
     }, this);
 }
@@ -1007,7 +1004,7 @@ function WMSPage() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$site$2d$header$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/components/wms-page.tsx",
-                lineNumber: 214,
+                lineNumber: 211,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -1019,7 +1016,7 @@ function WMSPage() {
                                 className: "hero-grid-bg"
                             }, void 0, false, {
                                 fileName: "[project]/components/wms-page.tsx",
-                                lineNumber: 219,
+                                lineNumber: 216,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1033,7 +1030,7 @@ function WMSPage() {
                                                 children: "Stoqr WMS · Agentic Warehousing"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/wms-page.tsx",
-                                                lineNumber: 222,
+                                                lineNumber: 219,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -1041,7 +1038,7 @@ function WMSPage() {
                                                     "Your warehouse,",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                         fileName: "[project]/components/wms-page.tsx",
-                                                        lineNumber: 224,
+                                                        lineNumber: 221,
                                                         columnNumber: 32
                                                     }, this),
                                                     "on ",
@@ -1052,13 +1049,13 @@ function WMSPage() {
                                                         children: "autopilot."
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/wms-page.tsx",
-                                                        lineNumber: 225,
+                                                        lineNumber: 222,
                                                         columnNumber: 20
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/wms-page.tsx",
-                                                lineNumber: 223,
+                                                lineNumber: 220,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1066,7 +1063,7 @@ function WMSPage() {
                                                 children: "Stoqr is an agentic platform for warehousing and transport. AI agents receive, store, pick, pack, dispatch, and bill — across every zone, in every region."
                                             }, void 0, false, {
                                                 fileName: "[project]/components/wms-page.tsx",
-                                                lineNumber: 227,
+                                                lineNumber: 224,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1082,13 +1079,13 @@ function WMSPage() {
                                                                 children: "→"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/wms-page.tsx",
-                                                                lineNumber: 233,
+                                                                lineNumber: 230,
                                                                 columnNumber: 33
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/wms-page.tsx",
-                                                        lineNumber: 232,
+                                                        lineNumber: 229,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1097,36 +1094,36 @@ function WMSPage() {
                                                         children: "See how it works"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/wms-page.tsx",
-                                                        lineNumber: 235,
+                                                        lineNumber: 232,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/wms-page.tsx",
-                                                lineNumber: 231,
+                                                lineNumber: 228,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/wms-page.tsx",
-                                        lineNumber: 221,
+                                        lineNumber: 218,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$warehouse$2d$floor$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                         fileName: "[project]/components/wms-page.tsx",
-                                        lineNumber: 240,
+                                        lineNumber: 237,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/wms-page.tsx",
-                                lineNumber: 220,
+                                lineNumber: 217,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/wms-page.tsx",
-                        lineNumber: 218,
+                        lineNumber: 215,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1139,7 +1136,7 @@ function WMSPage() {
                                     children: "One platform · floor to invoice"
                                 }, void 0, false, {
                                     fileName: "[project]/components/wms-page.tsx",
-                                    lineNumber: 247,
+                                    lineNumber: 244,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1152,14 +1149,14 @@ function WMSPage() {
                                                     children: "+"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 250,
+                                                    lineNumber: 247,
                                                     columnNumber: 28
                                                 }, this),
                                                 " 3PL storage"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 249,
+                                            lineNumber: 246,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1169,21 +1166,21 @@ function WMSPage() {
                                                     children: "+"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 253,
+                                                    lineNumber: 250,
                                                     columnNumber: 24
                                                 }, this),
                                                 " maritime"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 252,
+                                            lineNumber: 249,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             children: "GDPR · PDPA · DPDPA"
                                         }, void 0, false, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 255,
+                                            lineNumber: 252,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1192,7 +1189,7 @@ function WMSPage() {
                                                     children: "SG"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 257,
+                                                    lineNumber: 254,
                                                     columnNumber: 17
                                                 }, this),
                                                 " · ",
@@ -1200,7 +1197,7 @@ function WMSPage() {
                                                     children: "IN"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 257,
+                                                    lineNumber: 254,
                                                     columnNumber: 29
                                                 }, this),
                                                 " · ",
@@ -1208,30 +1205,30 @@ function WMSPage() {
                                                     children: "UAE"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 257,
+                                                    lineNumber: 254,
                                                     columnNumber: 41
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 256,
+                                            lineNumber: 253,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/wms-page.tsx",
-                                    lineNumber: 248,
+                                    lineNumber: 245,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/wms-page.tsx",
-                            lineNumber: 246,
+                            lineNumber: 243,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/wms-page.tsx",
-                        lineNumber: 245,
+                        lineNumber: 242,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1248,7 +1245,7 @@ function WMSPage() {
                                             children: "The cost of the floor"
                                         }, void 0, false, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 267,
+                                            lineNumber: 264,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1261,26 +1258,26 @@ function WMSPage() {
                                                     children: "They lose it on operations."
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 268,
+                                                    lineNumber: 265,
                                                     columnNumber: 62
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 268,
+                                            lineNumber: 265,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             children: "Racking is the cheap part. The expensive part is everything that happens between the inbound dock and the invoice — and most of it still runs on paper, spreadsheets, and memory."
                                         }, void 0, false, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 269,
+                                            lineNumber: 266,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/wms-page.tsx",
-                                    lineNumber: 266,
+                                    lineNumber: 263,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1293,43 +1290,43 @@ function WMSPage() {
                                                     children: c.id
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 277,
+                                                    lineNumber: 274,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                                     children: c.h
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 278,
+                                                    lineNumber: 275,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     children: c.p
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 279,
+                                                    lineNumber: 276,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, c.id, true, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 276,
+                                            lineNumber: 273,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/wms-page.tsx",
-                                    lineNumber: 274,
+                                    lineNumber: 271,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/wms-page.tsx",
-                            lineNumber: 265,
+                            lineNumber: 262,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/wms-page.tsx",
-                        lineNumber: 264,
+                        lineNumber: 261,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1346,7 +1343,7 @@ function WMSPage() {
                                             children: "How Stoqr works"
                                         }, void 0, false, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 290,
+                                            lineNumber: 287,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1359,13 +1356,13 @@ function WMSPage() {
                                                     children: "Stoqr runs every step."
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 291,
+                                                    lineNumber: 288,
                                                     columnNumber: 61
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 291,
+                                            lineNumber: 288,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1378,20 +1375,20 @@ function WMSPage() {
                                                     children: "flow"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 293,
+                                                    lineNumber: 290,
                                                     columnNumber: 47
                                                 }, this),
                                                 ": an ordered sequence of steps your team defines once. Upload a list, Stoqr spins up a job, and agents execute it — recording quantities, validating documents, updating stock, and generating the paperwork automatically."
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 292,
+                                            lineNumber: 289,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/wms-page.tsx",
-                                    lineNumber: 289,
+                                    lineNumber: 286,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1404,21 +1401,21 @@ function WMSPage() {
                                                     children: s.zone
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 301,
+                                                    lineNumber: 298,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                                     children: s.h
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 302,
+                                                    lineNumber: 299,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     children: s.p
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 303,
+                                                    lineNumber: 300,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1429,41 +1426,48 @@ function WMSPage() {
                                                                     children: f.b
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/wms-page.tsx",
-                                                                    lineNumber: 307,
+                                                                    lineNumber: 304,
                                                                     columnNumber: 25
                                                                 }, this),
-                                                                f.t
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "pf-sub",
+                                                                    children: f.t
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/components/wms-page.tsx",
+                                                                    lineNumber: 305,
+                                                                    columnNumber: 25
+                                                                }, this)
                                                             ]
                                                         }, i, true, {
                                                             fileName: "[project]/components/wms-page.tsx",
-                                                            lineNumber: 306,
+                                                            lineNumber: 303,
                                                             columnNumber: 23
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 304,
+                                                    lineNumber: 301,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, s.zone, true, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 300,
+                                            lineNumber: 297,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/wms-page.tsx",
-                                    lineNumber: 298,
+                                    lineNumber: 295,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/wms-page.tsx",
-                            lineNumber: 288,
+                            lineNumber: 285,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/wms-page.tsx",
-                        lineNumber: 287,
+                        lineNumber: 284,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1480,7 +1484,7 @@ function WMSPage() {
                                             children: "The platform"
                                         }, void 0, false, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 322,
+                                            lineNumber: 319,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1493,26 +1497,26 @@ function WMSPage() {
                                                     children: "inbound dock to the invoice."
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 323,
+                                                    lineNumber: 320,
                                                     columnNumber: 40
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 323,
+                                            lineNumber: 320,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             children: "Eight modules built on a single flow engine and one source of inventory truth. Run fulfilment and 3PL storage in the same building — service type is set per job, not per client."
                                         }, void 0, false, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 324,
+                                            lineNumber: 321,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/wms-page.tsx",
-                                    lineNumber: 321,
+                                    lineNumber: 318,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1525,7 +1529,7 @@ function WMSPage() {
                                                     children: m.id
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 332,
+                                                    lineNumber: 329,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1535,14 +1539,14 @@ function WMSPage() {
                                                     children: m.h
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 333,
+                                                    lineNumber: 330,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     children: m.p
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 334,
+                                                    lineNumber: 331,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1551,34 +1555,34 @@ function WMSPage() {
                                                             children: t
                                                         }, t, false, {
                                                             fileName: "[project]/components/wms-page.tsx",
-                                                            lineNumber: 337,
+                                                            lineNumber: 334,
                                                             columnNumber: 23
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 335,
+                                                    lineNumber: 332,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, m.h, true, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 331,
+                                            lineNumber: 328,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/wms-page.tsx",
-                                    lineNumber: 329,
+                                    lineNumber: 326,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/wms-page.tsx",
-                            lineNumber: 320,
+                            lineNumber: 317,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/wms-page.tsx",
-                        lineNumber: 319,
+                        lineNumber: 316,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1595,7 +1599,7 @@ function WMSPage() {
                                             children: "The agentic layer"
                                         }, void 0, false, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 350,
+                                            lineNumber: 347,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1608,27 +1612,27 @@ function WMSPage() {
                                                     children: "They’re agents."
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 351,
+                                                    lineNumber: 348,
                                                     columnNumber: 50
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 351,
+                                            lineNumber: 348,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             children: "A flow in Stoqr isn’t a static set of boxes to tick. Each job is watched by AI agents that understand what the step is for, notice when something’s wrong, and act on it — before a human has to."
                                         }, void 0, false, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 352,
+                                            lineNumber: 349,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             children: "The platform is backed by a logistics-trained small language model that sharpens with every job your warehouse runs. The more you operate, the better it gets at the work."
                                         }, void 0, false, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 357,
+                                            lineNumber: 354,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1638,7 +1642,7 @@ function WMSPage() {
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Check, {}, void 0, false, {
                                                             fileName: "[project]/components/wms-page.tsx",
-                                                            lineNumber: 363,
+                                                            lineNumber: 360,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1650,27 +1654,27 @@ function WMSPage() {
                                                                     children: "Self-healing jobs."
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/wms-page.tsx",
-                                                                    lineNumber: 365,
+                                                                    lineNumber: 362,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 " Short pick on a line? The agent reallocates from another location and keeps the job moving instead of stalling for a supervisor."
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/wms-page.tsx",
-                                                            lineNumber: 364,
+                                                            lineNumber: 361,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 362,
+                                                    lineNumber: 359,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Check, {}, void 0, false, {
                                                             fileName: "[project]/components/wms-page.tsx",
-                                                            lineNumber: 370,
+                                                            lineNumber: 367,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1682,27 +1686,27 @@ function WMSPage() {
                                                                     children: "Exceptions, not everything."
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/wms-page.tsx",
-                                                                    lineNumber: 372,
+                                                                    lineNumber: 369,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 " Variances get flagged, retries get attempted, and only the genuinely unusual reaches a person. Your team manages the edge cases, not the routine."
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/wms-page.tsx",
-                                                            lineNumber: 371,
+                                                            lineNumber: 368,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 369,
+                                                    lineNumber: 366,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Check, {}, void 0, false, {
                                                             fileName: "[project]/components/wms-page.tsx",
-                                                            lineNumber: 377,
+                                                            lineNumber: 374,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1714,32 +1718,32 @@ function WMSPage() {
                                                                     children: "A data flywheel."
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/wms-page.tsx",
-                                                                    lineNumber: 379,
+                                                                    lineNumber: 376,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 " Every receipt, pick, and dispatch trains the model on your operation — so forecasts, allocations, and routing get sharper over time."
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/wms-page.tsx",
-                                                            lineNumber: 378,
+                                                            lineNumber: 375,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 376,
+                                                    lineNumber: 373,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 361,
+                                            lineNumber: 358,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/wms-page.tsx",
-                                    lineNumber: 349,
+                                    lineNumber: 346,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1753,20 +1757,20 @@ function WMSPage() {
                                                     children: "Agent log · JOB-8842"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 387,
+                                                    lineNumber: 384,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "OUTBOUND"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 388,
+                                                    lineNumber: 385,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 386,
+                                            lineNumber: 383,
                                             columnNumber: 15
                                         }, this),
                                         agentLog.map((line, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1777,37 +1781,37 @@ function WMSPage() {
                                                         children: line.t
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/wms-page.tsx",
-                                                        lineNumber: 392,
+                                                        lineNumber: 389,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         children: line.body
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/wms-page.tsx",
-                                                        lineNumber: 393,
+                                                        lineNumber: 390,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, i, true, {
                                                 fileName: "[project]/components/wms-page.tsx",
-                                                lineNumber: 391,
+                                                lineNumber: 388,
                                                 columnNumber: 17
                                             }, this))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/wms-page.tsx",
-                                    lineNumber: 385,
+                                    lineNumber: 382,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/wms-page.tsx",
-                            lineNumber: 348,
+                            lineNumber: 345,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/wms-page.tsx",
-                        lineNumber: 347,
+                        lineNumber: 344,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1824,27 +1828,27 @@ function WMSPage() {
                                             children: "Built for the way you operate"
                                         }, void 0, false, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 404,
+                                            lineNumber: 401,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                             children: "From a single warehouse to a multi-region 3PL."
                                         }, void 0, false, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 405,
+                                            lineNumber: 402,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             children: "Stoqr scales its isolation to your size — shared, schema-isolated, or a dedicated database — so a small operator and an enterprise run on the same product with the data boundaries each one needs."
                                         }, void 0, false, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 406,
+                                            lineNumber: 403,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/wms-page.tsx",
-                                    lineNumber: 403,
+                                    lineNumber: 400,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1857,14 +1861,14 @@ function WMSPage() {
                                                     children: s.tier
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 414,
+                                                    lineNumber: 411,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                                     children: s.h
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 415,
+                                                    lineNumber: 412,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1872,7 +1876,7 @@ function WMSPage() {
                                                     children: s.who
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 416,
+                                                    lineNumber: 413,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1880,42 +1884,34 @@ function WMSPage() {
                                                             children: p
                                                         }, p, false, {
                                                             fileName: "[project]/components/wms-page.tsx",
-                                                            lineNumber: 419,
+                                                            lineNumber: 416,
                                                             columnNumber: 23
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 417,
-                                                    columnNumber: 19
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "iso",
-                                                    children: s.iso
-                                                }, void 0, false, {
-                                                    fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 422,
+                                                    lineNumber: 414,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, s.h, true, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 413,
+                                            lineNumber: 410,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/wms-page.tsx",
-                                    lineNumber: 411,
+                                    lineNumber: 408,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/wms-page.tsx",
-                            lineNumber: 402,
+                            lineNumber: 399,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/wms-page.tsx",
-                        lineNumber: 401,
+                        lineNumber: 398,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1931,27 +1927,27 @@ function WMSPage() {
                                             children: "Trust & residency"
                                         }, void 0, false, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 433,
+                                            lineNumber: 429,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                             children: "Compliance isn’t a bolt-on."
                                         }, void 0, false, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 434,
+                                            lineNumber: 430,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             children: "It’s wired into the data model — so the goods, the documents, and the audit trail all stay where they’re supposed to."
                                         }, void 0, false, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 435,
+                                            lineNumber: 431,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/wms-page.tsx",
-                                    lineNumber: 432,
+                                    lineNumber: 428,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1964,43 +1960,43 @@ function WMSPage() {
                                                     children: c.ct
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 443,
+                                                    lineNumber: 439,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                                     children: c.h
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 444,
+                                                    lineNumber: 440,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     children: c.p
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 445,
+                                                    lineNumber: 441,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, c.h, true, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 442,
+                                            lineNumber: 438,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/wms-page.tsx",
-                                    lineNumber: 440,
+                                    lineNumber: 436,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/wms-page.tsx",
-                            lineNumber: 431,
+                            lineNumber: 427,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/wms-page.tsx",
-                        lineNumber: 430,
+                        lineNumber: 426,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -2010,7 +2006,7 @@ function WMSPage() {
                                 className: "cta-bg"
                             }, void 0, false, {
                                 fileName: "[project]/components/wms-page.tsx",
-                                lineNumber: 454,
+                                lineNumber: 450,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2026,7 +2022,7 @@ function WMSPage() {
                                             children: "Start a pilot"
                                         }, void 0, false, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 457,
+                                            lineNumber: 453,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2034,7 +2030,7 @@ function WMSPage() {
                                                 "See Stoqr run",
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 462,
+                                                    lineNumber: 458,
                                                     columnNumber: 17
                                                 }, this),
                                                 "your ",
@@ -2045,20 +2041,20 @@ function WMSPage() {
                                                     children: "warehouse."
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 463,
+                                                    lineNumber: 459,
                                                     columnNumber: 22
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 460,
+                                            lineNumber: 456,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             children: "Put one flow on autopilot and watch it work — from the inbound dock to the invoice."
                                         }, void 0, false, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 465,
+                                            lineNumber: 461,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2074,13 +2070,13 @@ function WMSPage() {
                                                             children: "→"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/wms-page.tsx",
-                                                            lineNumber: 468,
+                                                            lineNumber: 464,
                                                             columnNumber: 33
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 467,
+                                                    lineNumber: 463,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -2089,47 +2085,47 @@ function WMSPage() {
                                                     children: "Follow on LinkedIn"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/wms-page.tsx",
-                                                    lineNumber: 470,
+                                                    lineNumber: 466,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/wms-page.tsx",
-                                            lineNumber: 466,
+                                            lineNumber: 462,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/wms-page.tsx",
-                                    lineNumber: 456,
+                                    lineNumber: 452,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/wms-page.tsx",
-                                lineNumber: 455,
+                                lineNumber: 451,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/wms-page.tsx",
-                        lineNumber: 453,
+                        lineNumber: 449,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/wms-page.tsx",
-                lineNumber: 216,
+                lineNumber: 213,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$site$2d$footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/components/wms-page.tsx",
-                lineNumber: 479,
+                lineNumber: 475,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/wms-page.tsx",
-        lineNumber: 213,
+        lineNumber: 210,
         columnNumber: 5
     }, this);
 }
