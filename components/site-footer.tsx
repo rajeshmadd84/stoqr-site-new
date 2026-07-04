@@ -9,7 +9,9 @@ export default function SiteFooter() {
           <span className="foot-copy">© 2026 Stoqr Singapore Pte. Ltd. All rights reserved.</span>
         </div>
         <div className="foot-right">
-          <a href={LINKEDIN_URL}>LinkedIn ↗</a>
+          <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
+            LinkedIn ↗
+          </a>
         </div>
       </div>
     </footer>

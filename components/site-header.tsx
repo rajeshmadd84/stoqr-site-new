@@ -26,6 +26,9 @@ export default function SiteHeader() {
               {l.label}
             </a>
           ))}
+          <a href={PILOT_URL} className="sq-btn sq-btn-primary nav-cta-mobile" onClick={() => setOpen(false)}>
+            Start a pilot <span className="arw">→</span>
+          </a>
         </nav>
         <div className="nav-cta">
           <a href={PILOT_URL} className="sq-btn sq-btn-primary">

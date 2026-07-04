@@ -223,7 +223,7 @@
 
 .nav-links a {
   color: var(--fg-secondary);
-  font-size: 13px;
+  font-size: 15px;
   transition: color .15s;
 }
 
@@ -245,6 +245,10 @@
   border-radius: 6px;
   padding: .4em .6em;
   font-size: 1rem;
+  display: none;
+}
+
+.nav-cta-mobile {
   display: none;
 }
 
@@ -1441,7 +1445,7 @@
     right: 0;
   }
 
-  .nav-links.open a {
+  .nav-links.open a:not(.nav-cta-mobile) {
     border-bottom: 1px solid var(--border-subtle);
     width: 100%;
     padding: .8rem 0;
@@ -1451,8 +1455,15 @@
     display: block;
   }
 
-  .nav-cta .sq-btn-ghost {
+  .nav-cta .sq-btn-ghost, .nav-cta > a.sq-btn-primary {
     display: none;
+  }
+
+  .nav-links.open .nav-cta-mobile {
+    justify-content: center;
+    width: 100%;
+    margin-top: .9rem;
+    display: inline-flex;
   }
 
   .prob-grid, .pipe-grid, .mod-grid, .seg-grid, .team-grid {

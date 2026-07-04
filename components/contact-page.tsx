@@ -20,7 +20,7 @@ const MAP_SRC =
 
 const roles = ["Owner / Executive", "Operations / Warehouse manager", "IT / Engineering", "Other"];
 const operations = ["SMB warehouse", "Third-party logistics (3PL)", "Enterprise / multi-site", "Maritime & bonded"];
-const regions = ["Singapore", "India", "European Union", "Other"];
+const regions = ["Singapore", "India", "UAE"];
 const firstFlows = [
   "Inbound / receiving",
   "Outbound / dispatch",

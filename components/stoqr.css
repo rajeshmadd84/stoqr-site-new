@@ -140,10 +140,11 @@
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:56px}
 .stoqr-root .brand{display:flex;align-items:center;gap:.5em}
 .nav-links{display:flex;align-items:center;gap:2rem}
-.nav-links a{font-size:13px;color:var(--fg-secondary);transition:color 150ms}
+.nav-links a{font-size:15px;color:var(--fg-secondary);transition:color 150ms}
 .nav-links a:hover{color:var(--fg-primary)}
 .nav-cta{display:flex;align-items:center;gap:.75rem}
 .menu-toggle{display:none;background:none;border:1px solid var(--border-default);border-radius:6px;color:var(--fg-secondary);padding:.4em .6em;font-size:1rem;cursor:pointer}
+.nav-cta-mobile{display:none}
 
 /* ============ HERO ============ */
 .hero{
@@ -448,9 +449,10 @@
     flex-direction:column;gap:0;background:var(--bg-surface);
     border-bottom:1px solid var(--border-subtle);padding:.5rem var(--pad) 1rem;
   }
-  .nav-links.open a{padding:.8rem 0;border-bottom:1px solid var(--border-subtle);width:100%}
+  .nav-links.open a:not(.nav-cta-mobile){padding:.8rem 0;border-bottom:1px solid var(--border-subtle);width:100%}
   .menu-toggle{display:block}
-  .nav-cta .sq-btn-ghost{display:none}
+  .nav-cta .sq-btn-ghost,.nav-cta>a.sq-btn-primary{display:none}
+  .nav-links.open .nav-cta-mobile{display:inline-flex;justify-content:center;width:100%;margin-top:.9rem}
   .prob-grid,.pipe-grid,.mod-grid,.seg-grid,.team-grid{grid-template-columns:1fr 1fr}
   .agent-wrap{grid-template-columns:1fr}
   .comp{grid-template-columns:1fr 1fr}
