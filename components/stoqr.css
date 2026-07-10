@@ -137,10 +137,10 @@
   background:rgba(245,247,251,.88);backdrop-filter:blur(12px);
   border-bottom:1px solid var(--border-subtle);
 }
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:56px}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding-top:1.1rem;padding-bottom:1.1rem}
 .stoqr-root .brand{display:flex;align-items:center;gap:.5em}
-.nav-links{display:flex;align-items:center;gap:2rem}
-.nav-links a{font-size:15px;color:var(--fg-secondary);transition:color 150ms}
+.nav-links{display:flex;align-items:center;gap:2rem;margin-left:auto;margin-right:2.5rem}
+.nav-links a{font-size:17px;color:var(--fg-secondary);transition:color 150ms;padding-left:1rem}
 .nav-links a:hover{color:var(--fg-primary)}
 .nav-cta{display:flex;align-items:center;gap:.75rem}
 .menu-toggle{display:none;background:none;border:1px solid var(--border-default);border-radius:6px;color:var(--fg-secondary);padding:.4em .6em;font-size:1rem;cursor:pointer}
@@ -445,7 +445,7 @@
 @media(max-width:900px){
   .nav-links{display:none}
   .nav-links.open{
-    display:flex;position:absolute;top:56px;left:0;right:0;
+    display:flex;position:absolute;top:100%;left:0;right:0;
     flex-direction:column;gap:0;background:var(--bg-surface);
     border-bottom:1px solid var(--border-subtle);padding:.5rem var(--pad) 1rem;
   }

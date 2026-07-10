@@ -15,9 +15,6 @@ import type { ChangeEvent, FormEvent } from "react";
 import SiteHeader from "./site-header";
 import SiteFooter from "./site-footer";
 
-const MAP_SRC =
-  "https://www.google.com/maps?q=%2315-01+Middle+Road+Fortune+Centre+Singapore+188979&output=embed";
-
 const roles = ["Owner / Executive", "Operations / Warehouse manager", "IT / Engineering", "Other"];
 const operations = ["SMB warehouse", "Third-party logistics (3PL)", "Enterprise / multi-site", "Maritime & bonded"];
 const regions = ["Singapore", "India", "UAE"];
@@ -116,11 +113,23 @@ export default function ContactPage() {
             <div className="sec-head reveal" style={{ marginBottom: "2rem" }}>
               <span className="eyebrow">Get in touch</span>
               <h2>Where to find us</h2>
-              <p>Reach out directly, or drop by our Singapore office.</p>
+              <p>Reach out directly, or drop by one of our offices.</p>
             </div>
             <div className="office-grid">
               <div className="office reveal">
                 <div className="flag">HQ</div>
+                <h4>Logpilot Limited</h4>
+                <address>
+                  Flat 4 51 Millennium House
+                  <br />
+                  Feltham, United Kingdom
+                  <br />
+                  TW13 4AB
+                </address>
+                <div className="reg">Company No: 16362130</div>
+              </div>
+              <div className="office reveal">
+                <div className="flag">ASIA & MENA</div>
                 <h4>Stoqr Singapore Pte. Ltd.</h4>
                 <address>
                   #15-01,MIDDLE ROAD, FORTUNE CENTRE
@@ -137,16 +146,6 @@ export default function ContactPage() {
                   <br />
                   Telephone: <a href="tel:+6590413331">+65 9041 3331</a>
                 </address>
-              </div>
-              <div className="office office-map reveal">
-                <div className="map-embed">
-                  <iframe
-                    src={MAP_SRC}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Stoqr Singapore office location"
-                  />
-                </div>
               </div>
             </div>
           </section>

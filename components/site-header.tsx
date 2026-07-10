@@ -6,7 +6,6 @@ import Image from "next/image";
 const PILOT_URL = "/contact";
 
 const navLinks = [
-  { href: "/", label: "Home" },
   { href: "/wms", label: "Warehousing" },
   { href: "/transport", label: "Logistics" },
   { href: "/contact", label: "Contact" },
