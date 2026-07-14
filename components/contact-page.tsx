@@ -113,23 +113,11 @@ export default function ContactPage() {
             <div className="sec-head reveal" style={{ marginBottom: "2rem" }}>
               <span className="eyebrow">Get in touch</span>
               <h2>Where to find us</h2>
-              <p>Reach out directly, or drop by one of our offices.</p>
+              <p>Reach out directly, or drop by our Singapore office.</p>
             </div>
             <div className="office-grid">
               <div className="office reveal">
                 <div className="flag">HQ</div>
-                <h4>Logpilot Limited</h4>
-                <address>
-                  Flat 4 51 Millennium House
-                  <br />
-                  Feltham, United Kingdom
-                  <br />
-                  TW13 4AB
-                </address>
-                <div className="reg">Company No: 16362130</div>
-              </div>
-              <div className="office reveal">
-                <div className="flag">ASIA & MENA</div>
                 <h4>Stoqr Singapore Pte. Ltd.</h4>
                 <address>
                   #15-01,MIDDLE ROAD, FORTUNE CENTRE
